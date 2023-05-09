@@ -14,7 +14,10 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QMainWindow{
+   <string notr="true">QWidget{
+	font-family: &quot;Microsoft YaHei UI&quot;;
+}
+QMainWindow{
 	max-width:606px;
 }
 QScrollArea{
@@ -836,7 +839,7 @@ QPushButton:checked{
         <number>0</number>
        </property>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="messagePushButton">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -858,7 +861,7 @@ QPushButton:checked{
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="contactsPushButton">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -877,7 +880,7 @@ QPushButton:checked{
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="spacePushButton">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -906,9 +909,9 @@ QPushButton:checked{
 }</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
-      <widget class="QWidget" name="page">
+      <widget class="QWidget" name="messagePage">
        <layout class="QHBoxLayout" name="horizontalLayout_7">
         <property name="spacing">
          <number>0</number>
@@ -936,6 +939,9 @@ QPushButton:checked{
 	border-radius:20px;
 	border:none;
 }</string>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
           </property>
           <property name="widgetResizable">
            <bool>true</bool>
@@ -2635,7 +2641,7 @@ QWidget#widget_15:hover{
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="page_2">
+      <widget class="QWidget" name="contactsPage">
        <layout class="QVBoxLayout" name="verticalLayout_34">
         <property name="spacing">
          <number>0</number>
@@ -2677,7 +2683,7 @@ QWidget#widget_15:hover{
             <number>0</number>
            </property>
            <item>
-            <widget class="QPushButton" name="pushButton_31">
+            <widget class="QPushButton" name="friendsPushButton">
              <property name="styleSheet">
               <string notr="true">QPushButton{
 	max-height:25px;
@@ -2712,7 +2718,7 @@ QPushButton:checked{
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_32">
+            <widget class="QPushButton" name="groupChatPushButton">
              <property name="styleSheet">
               <string notr="true">QPushButton{
 	max-height:25px;
@@ -2811,9 +2817,9 @@ QPushButton:hover{
         <item>
          <widget class="QStackedWidget" name="stackedWidget_2">
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
-          <widget class="QWidget" name="page_3">
+          <widget class="QWidget" name="friendsPage">
            <layout class="QHBoxLayout" name="horizontalLayout_24">
             <property name="spacing">
              <number>0</number>
@@ -2838,6 +2844,9 @@ QPushButton:hover{
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
               <property name="widgetResizable">
                <bool>true</bool>
               </property>
@@ -2846,11 +2855,11 @@ QPushButton:hover{
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>536</width>
+                 <width>599</width>
                  <height>1052</height>
                 </rect>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_41">
+               <layout class="QVBoxLayout" name="friendsVerticalLayout">
                 <property name="spacing">
                  <number>0</number>
                 </property>
@@ -2891,38 +2900,88 @@ QPushButton:hover{
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="pushButton_36">
+                    <widget class="QWidget" name="newFriendsPushButtonWidget" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>34</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">QPushButton{
+                      <string notr="true">QWidget{
 	max-height:34px;
 	min-height:34px;
+}
+QWidget:hover{
+	background-color: rgb(242, 242, 242);
+}</string>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_76">
+                      <property name="spacing">
+                       <number>5</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="newFriendsPushButton">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton{
 	text-align:left;
 	font-size:14px;
 	border:none;
 	padding-left:9px;
-}
-QPushButton:hover{
-	background-color: rgb(242, 242, 242);
 }</string>
-                     </property>
-                     <property name="text">
-                      <string>新朋友</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resource/resources.qrc">
-                       <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
-                     </property>
+                        </property>
+                        <property name="text">
+                         <string>新朋友</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resource/resources.qrc">
+                          <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checked">
+                         <bool>false</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_152">
+                        <property name="text">
+                         <string/>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QWidget" name="widget_33" native="true">
+                    <widget class="QWidget" name="newFriendsWidget" native="true">
                      <property name="styleSheet">
-                      <string notr="true">QWidget#widget_33{
+                      <string notr="true">QWidget#newFriendsWidget{
 	max-height:76px;
 	min-height:76px;
 }</string>
                      </property>
-                     <layout class="QVBoxLayout" name="verticalLayout_7">
+                     <layout class="QVBoxLayout" name="newFriendsVerticalLayout">
                       <property name="spacing">
                        <number>0</number>
                       </property>
@@ -3002,32 +3061,88 @@ QPushButton:hover{
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="pushButton_35">
+                    <widget class="QWidget" name="myDevicePushButtonWidget" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>34</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">QPushButton{
+                      <string notr="true">QWidget{
 	max-height:34px;
 	min-height:34px;
+}
+QWidget:hover{
+	background-color: rgb(242, 242, 242);
+}</string>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_67">
+                      <property name="spacing">
+                       <number>5</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="myDevicePushButton">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton{
 	text-align:left;
 	font-size:14px;
 	border:none;
 	padding-left:9px;
-}
-QPushButton:hover{
-	background-color: rgb(242, 242, 242);
 }</string>
-                     </property>
-                     <property name="text">
-                      <string>我的设备 1/2</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resource/resources.qrc">
-                       <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
-                     </property>
+                        </property>
+                        <property name="text">
+                         <string>我的设备</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resource/resources.qrc">
+                          <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checked">
+                         <bool>false</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_151">
+                        <property name="text">
+                         <string>1/2</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QWidget" name="widget_29" native="true">
-                     <layout class="QVBoxLayout" name="verticalLayout_43">
+                    <widget class="QWidget" name="myDeviceWidget" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>100</height>
+                      </size>
+                     </property>
+                     <layout class="QVBoxLayout" name="myDeviceVerticalLayout">
                       <property name="spacing">
                        <number>0</number>
                       </property>
@@ -3142,107 +3257,107 @@ QWidget#widget_30:hover{
                         </layout>
                        </widget>
                       </item>
-                     </layout>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QWidget" name="widget_34" native="true">
-                     <property name="styleSheet">
-                      <string notr="true">QWidget#widget_34{
+                      <item>
+                       <widget class="QWidget" name="widget_34" native="true">
+                        <property name="styleSheet">
+                         <string notr="true">QWidget#widget_34{
 	max-height:60px;
 	min-height:60px;
 }
 QWidget#widget_34:hover{
 	background-color: rgb(242, 242, 242);
 }</string>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_29" stretch="0,1,0">
-                      <property name="spacing">
-                       <number>9</number>
-                      </property>
-                      <property name="leftMargin">
-                       <number>14</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>10</number>
-                      </property>
-                      <property name="rightMargin">
-                       <number>8</number>
-                      </property>
-                      <property name="bottomMargin">
-                       <number>10</number>
-                      </property>
-                      <item>
-                       <widget class="QPushButton" name="pushButton_57">
-                        <property name="enabled">
-                         <bool>false</bool>
                         </property>
-                        <property name="styleSheet">
-                         <string notr="true">QPushButton{
+                        <layout class="QHBoxLayout" name="horizontalLayout_29" stretch="0,1,0">
+                         <property name="spacing">
+                          <number>9</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>14</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>10</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>8</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>10</number>
+                         </property>
+                         <item>
+                          <widget class="QPushButton" name="pushButton_57">
+                           <property name="enabled">
+                            <bool>false</bool>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton{
 	min-height:40px;
 	min-width:40px;
 	max-height:40px;
 	max-width:40px;
 	border-radius:20px;
 }</string>
-                        </property>
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="resource/resources.qrc">
-                          <normaloff>:/image/image/我的手机.png</normaloff>:/image/image/我的手机.png</iconset>
-                        </property>
-                        <property name="iconSize">
-                         <size>
-                          <width>40</width>
-                          <height>40</height>
-                         </size>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <layout class="QVBoxLayout" name="verticalLayout_49">
-                        <property name="spacing">
-                         <number>0</number>
-                        </property>
-                        <property name="sizeConstraint">
-                         <enum>QLayout::SetDefaultConstraint</enum>
-                        </property>
-                        <property name="leftMargin">
-                         <number>0</number>
-                        </property>
-                        <property name="rightMargin">
-                         <number>0</number>
-                        </property>
-                        <item>
-                         <widget class="QLabel" name="label_80">
-                          <property name="styleSheet">
-                           <string notr="true">QLabel{
+                           </property>
+                           <property name="text">
+                            <string/>
+                           </property>
+                           <property name="icon">
+                            <iconset resource="resource/resources.qrc">
+                             <normaloff>:/image/image/我的手机.png</normaloff>:/image/image/我的手机.png</iconset>
+                           </property>
+                           <property name="iconSize">
+                            <size>
+                             <width>40</width>
+                             <height>40</height>
+                            </size>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <layout class="QVBoxLayout" name="verticalLayout_49">
+                           <property name="spacing">
+                            <number>0</number>
+                           </property>
+                           <property name="sizeConstraint">
+                            <enum>QLayout::SetDefaultConstraint</enum>
+                           </property>
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>0</number>
+                           </property>
+                           <item>
+                            <widget class="QLabel" name="label_80">
+                             <property name="styleSheet">
+                              <string notr="true">QLabel{
 	font-size:13px;
 }</string>
-                          </property>
-                          <property name="text">
-                           <string>我的iPad</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLabel" name="label_84">
-                          <property name="styleSheet">
-                           <string notr="true">QLabel{
+                             </property>
+                             <property name="text">
+                              <string>我的iPad</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_84">
+                             <property name="styleSheet">
+                              <string notr="true">QLabel{
 	color: rgb(117, 117, 117);
 }</string>
-                          </property>
-                          <property name="text">
-                           <string>上次登录:2022-11-6</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </item>
-                      <item>
-                       <layout class="QVBoxLayout" name="verticalLayout_50"/>
+                             </property>
+                             <property name="text">
+                              <string>上次登录:2022-11-6</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                         <item>
+                          <layout class="QVBoxLayout" name="verticalLayout_50"/>
+                         </item>
+                        </layout>
+                       </widget>
                       </item>
                      </layout>
                     </widget>
@@ -3275,32 +3390,82 @@ QWidget#widget_34:hover{
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="pushButton_34">
+                    <widget class="QWidget" name="familyPushButtonWidget" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>34</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">QPushButton{
+                      <string notr="true">QWidget{
 	max-height:34px;
 	min-height:34px;
+}
+QWidget:hover{
+	background-color: rgb(242, 242, 242);
+}</string>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_78">
+                      <property name="spacing">
+                       <number>5</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="familyPushButton">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton{
 	text-align:left;
 	font-size:14px;
 	border:none;
 	padding-left:9px;
-}
-QPushButton:hover{
-	background-color: rgb(242, 242, 242);
 }</string>
-                     </property>
-                     <property name="text">
-                      <string>家人 3/4</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resource/resources.qrc">
-                       <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
-                     </property>
+                        </property>
+                        <property name="text">
+                         <string>家人</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resource/resources.qrc">
+                          <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checked">
+                         <bool>false</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_154">
+                        <property name="text">
+                         <string>3/4</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QWidget" name="widget_25" native="true">
-                     <layout class="QVBoxLayout" name="verticalLayout_39">
+                    <widget class="QWidget" name="familyWidget" native="true">
+                     <layout class="QVBoxLayout" name="familyVerticalLayout">
                       <property name="spacing">
                        <number>0</number>
                       </property>
@@ -3867,7 +4032,7 @@ QPushButton:hover{
                   </layout>
                  </widget>
                 </item>
-                <item>
+                <item alignment="Qt::AlignTop">
                  <widget class="QWidget" name="widget_26" native="true">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -3892,32 +4057,82 @@ QPushButton:hover{
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="pushButton_37">
+                    <widget class="QWidget" name="myFriendPushButtonWidget" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>34</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">QPushButton{
+                      <string notr="true">QWidget{
 	max-height:34px;
 	min-height:34px;
+}
+QWidget:hover{
+	background-color: rgb(242, 242, 242);
+}</string>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_79">
+                      <property name="spacing">
+                       <number>5</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="myFriendPushButton">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton{
 	text-align:left;
 	font-size:14px;
 	border:none;
 	padding-left:9px;
-}
-QPushButton:hover{
-	background-color: rgb(242, 242, 242);
 }</string>
-                     </property>
-                     <property name="text">
-                      <string>我的好友 5/8</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resource/resources.qrc">
-                       <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
-                     </property>
+                        </property>
+                        <property name="text">
+                         <string>我的好友</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resource/resources.qrc">
+                          <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checked">
+                         <bool>false</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_155">
+                        <property name="text">
+                         <string>5/8</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QWidget" name="widget_27" native="true">
-                     <layout class="QVBoxLayout" name="verticalLayout_58">
+                    <widget class="QWidget" name="myFriendWidget" native="true">
+                     <layout class="QVBoxLayout" name="myFriendVerticalLayout">
                       <property name="spacing">
                        <number>0</number>
                       </property>
@@ -5200,7 +5415,7 @@ QPushButton:hover{
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="page_4">
+          <widget class="QWidget" name="groupChatPage">
            <layout class="QHBoxLayout" name="horizontalLayout_26">
             <property name="spacing">
              <number>0</number>
@@ -5219,6 +5434,9 @@ QPushButton:hover{
             </property>
             <item>
              <widget class="QScrollArea" name="scrollArea_3">
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
               <property name="widgetResizable">
                <bool>true</bool>
               </property>
@@ -5227,11 +5445,11 @@ QPushButton:hover{
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>191</width>
-                 <height>438</height>
+                 <width>606</width>
+                 <height>447</height>
                 </rect>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_35">
+               <layout class="QVBoxLayout" name="groupChatVerticalLayout">
                 <property name="spacing">
                  <number>0</number>
                 </property>
@@ -5272,32 +5490,82 @@ QPushButton:hover{
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="pushButton_84">
+                    <widget class="QWidget" name="createdGroupChatPushButtonWidget" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>34</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">QPushButton{
+                      <string notr="true">QWidget{
 	max-height:34px;
 	min-height:34px;
+}
+QWidget:hover{
+	background-color: rgb(242, 242, 242);
+}</string>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_77">
+                      <property name="spacing">
+                       <number>5</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="createdGroupChatPushButton">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton{
 	text-align:left;
 	font-size:14px;
 	border:none;
 	padding-left:9px;
-}
-QPushButton:hover{
-	background-color: rgb(242, 242, 242);
 }</string>
-                     </property>
-                     <property name="text">
-                      <string>我创建的群聊 2/2</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resource/resources.qrc">
-                       <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
-                     </property>
+                        </property>
+                        <property name="text">
+                         <string>我创建的群聊</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resource/resources.qrc">
+                          <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checked">
+                         <bool>false</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_153">
+                        <property name="text">
+                         <string>2/2</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QWidget" name="widget_50" native="true">
-                     <layout class="QVBoxLayout" name="verticalLayout_78">
+                    <widget class="QWidget" name="createdGroupChatWidget" native="true">
+                     <layout class="QVBoxLayout" name="createdGroupChatVerticalLayout">
                       <property name="spacing">
                        <number>0</number>
                       </property>
@@ -5516,32 +5784,82 @@ QWidget#widget_56:hover{
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="pushButton_73">
+                    <widget class="QWidget" name="managedGroupChatPushButtonWidget" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>34</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">QPushButton{
+                      <string notr="true">QWidget{
 	max-height:34px;
 	min-height:34px;
+}
+QWidget:hover{
+	background-color: rgb(242, 242, 242);
+}</string>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_80">
+                      <property name="spacing">
+                       <number>5</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="managedGroupChatPushButton">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton{
 	text-align:left;
 	font-size:14px;
 	border:none;
 	padding-left:9px;
-}
-QPushButton:hover{
-	background-color: rgb(242, 242, 242);
 }</string>
-                     </property>
-                     <property name="text">
-                      <string>我管理的群聊 1/2</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resource/resources.qrc">
-                       <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
-                     </property>
+                        </property>
+                        <property name="text">
+                         <string>我管理的群聊</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resource/resources.qrc">
+                          <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checked">
+                         <bool>false</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_156">
+                        <property name="text">
+                         <string>1/2</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QWidget" name="widget_54" native="true">
-                     <layout class="QVBoxLayout" name="verticalLayout_80">
+                    <widget class="QWidget" name="managedGroupChatWidget" native="true">
+                     <layout class="QVBoxLayout" name="managedGroupChatVerticalLayout">
                       <property name="spacing">
                        <number>0</number>
                       </property>
@@ -5797,32 +6115,82 @@ QWidget#widget_59:hover{
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="pushButton_71">
+                    <widget class="QWidget" name="joinedGroupChatPushButtonWidget" native="true">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>34</height>
+                      </size>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">QPushButton{
+                      <string notr="true">QWidget{
 	max-height:34px;
 	min-height:34px;
+}
+QWidget:hover{
+	background-color: rgb(242, 242, 242);
+}</string>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_81">
+                      <property name="spacing">
+                       <number>5</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>0</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="joinedGroupChatPushButton">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="styleSheet">
+                         <string notr="true">QPushButton{
 	text-align:left;
 	font-size:14px;
 	border:none;
 	padding-left:9px;
-}
-QPushButton:hover{
-	background-color: rgb(242, 242, 242);
 }</string>
-                     </property>
-                     <property name="text">
-                      <string>我加入的群聊 3/4</string>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="resource/resources.qrc">
-                       <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
-                     </property>
+                        </property>
+                        <property name="text">
+                         <string>我加入的群聊</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="resource/resources.qrc">
+                          <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checked">
+                         <bool>false</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_157">
+                        <property name="text">
+                         <string>3/4</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QWidget" name="widget_47" native="true">
-                     <layout class="QVBoxLayout" name="verticalLayout_68">
+                    <widget class="QWidget" name="joinedGroupChatWidget" native="true">
+                     <layout class="QVBoxLayout" name="joinedGroupChatVerticalLayout">
                       <property name="spacing">
                        <number>0</number>
                       </property>
@@ -6198,7 +6566,7 @@ QWidget#widget_55:hover{
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="page_5">
+      <widget class="QWidget" name="spacePage">
        <layout class="QVBoxLayout" name="verticalLayout_36">
         <property name="spacing">
          <number>0</number>
@@ -6370,7 +6738,7 @@ QScrollBar::sub-line:vertical{
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>458</width>
+             <width>597</width>
              <height>2024</height>
             </rect>
            </property>

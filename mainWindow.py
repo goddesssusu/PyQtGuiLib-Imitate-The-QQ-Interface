@@ -15,7 +15,10 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(606, 713)
-        MainWindow.setStyleSheet("QMainWindow{\n"
+        MainWindow.setStyleSheet("QWidget{\n"
+"    font-family: \"Microsoft YaHei UI\";\n"
+"}\n"
+"QMainWindow{\n"
 "    max-width:606px;\n"
 "}\n"
 "QScrollArea{\n"
@@ -489,50 +492,50 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setContentsMargins(12, 0, 12, 0)
         self.horizontalLayout.setSpacing(28)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.pushButton = QtWidgets.QPushButton(self.widget_3)
+        self.messagePushButton = QtWidgets.QPushButton(self.widget_3)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
-        self.pushButton.setSizePolicy(sizePolicy)
-        self.pushButton.setCheckable(True)
-        self.pushButton.setChecked(True)
-        self.pushButton.setAutoExclusive(True)
-        self.pushButton.setObjectName("pushButton")
-        self.horizontalLayout.addWidget(self.pushButton)
-        self.pushButton_2 = QtWidgets.QPushButton(self.widget_3)
+        sizePolicy.setHeightForWidth(self.messagePushButton.sizePolicy().hasHeightForWidth())
+        self.messagePushButton.setSizePolicy(sizePolicy)
+        self.messagePushButton.setCheckable(True)
+        self.messagePushButton.setChecked(True)
+        self.messagePushButton.setAutoExclusive(True)
+        self.messagePushButton.setObjectName("messagePushButton")
+        self.horizontalLayout.addWidget(self.messagePushButton)
+        self.contactsPushButton = QtWidgets.QPushButton(self.widget_3)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_2.sizePolicy().hasHeightForWidth())
-        self.pushButton_2.setSizePolicy(sizePolicy)
-        self.pushButton_2.setCheckable(True)
-        self.pushButton_2.setAutoExclusive(True)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.horizontalLayout.addWidget(self.pushButton_2)
-        self.pushButton_3 = QtWidgets.QPushButton(self.widget_3)
+        sizePolicy.setHeightForWidth(self.contactsPushButton.sizePolicy().hasHeightForWidth())
+        self.contactsPushButton.setSizePolicy(sizePolicy)
+        self.contactsPushButton.setCheckable(True)
+        self.contactsPushButton.setAutoExclusive(True)
+        self.contactsPushButton.setObjectName("contactsPushButton")
+        self.horizontalLayout.addWidget(self.contactsPushButton)
+        self.spacePushButton = QtWidgets.QPushButton(self.widget_3)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_3.sizePolicy().hasHeightForWidth())
-        self.pushButton_3.setSizePolicy(sizePolicy)
-        self.pushButton_3.setCheckable(True)
-        self.pushButton_3.setAutoExclusive(True)
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.horizontalLayout.addWidget(self.pushButton_3)
+        sizePolicy.setHeightForWidth(self.spacePushButton.sizePolicy().hasHeightForWidth())
+        self.spacePushButton.setSizePolicy(sizePolicy)
+        self.spacePushButton.setCheckable(True)
+        self.spacePushButton.setAutoExclusive(True)
+        self.spacePushButton.setObjectName("spacePushButton")
+        self.horizontalLayout.addWidget(self.spacePushButton)
         self.verticalLayout.addWidget(self.widget_3)
         self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
         self.stackedWidget.setStyleSheet("QWidget{\n"
 "    background-color:transparent;\n"
 "}")
         self.stackedWidget.setObjectName("stackedWidget")
-        self.page = QtWidgets.QWidget()
-        self.page.setObjectName("page")
-        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.page)
+        self.messagePage = QtWidgets.QWidget()
+        self.messagePage.setObjectName("messagePage")
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.messagePage)
         self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_7.setSpacing(0)
         self.horizontalLayout_7.setObjectName("horizontalLayout_7")
-        self.scrollArea = QtWidgets.QScrollArea(self.page)
+        self.scrollArea = QtWidgets.QScrollArea(self.messagePage)
         self.scrollArea.setStyleSheet("QPushButton{\n"
 "    min-height:40px;\n"
 "    min-width:40px;\n"
@@ -541,6 +544,7 @@ class Ui_MainWindow(object):
 "    border-radius:20px;\n"
 "    border:none;\n"
 "}")
+        self.scrollArea.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
@@ -1379,14 +1383,14 @@ class Ui_MainWindow(object):
         self.verticalLayout_6.addWidget(self.widget_15)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.horizontalLayout_7.addWidget(self.scrollArea)
-        self.stackedWidget.addWidget(self.page)
-        self.page_2 = QtWidgets.QWidget()
-        self.page_2.setObjectName("page_2")
-        self.verticalLayout_34 = QtWidgets.QVBoxLayout(self.page_2)
+        self.stackedWidget.addWidget(self.messagePage)
+        self.contactsPage = QtWidgets.QWidget()
+        self.contactsPage.setObjectName("contactsPage")
+        self.verticalLayout_34 = QtWidgets.QVBoxLayout(self.contactsPage)
         self.verticalLayout_34.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_34.setSpacing(0)
         self.verticalLayout_34.setObjectName("verticalLayout_34")
-        self.widget_23 = QtWidgets.QWidget(self.page_2)
+        self.widget_23 = QtWidgets.QWidget(self.contactsPage)
         self.widget_23.setStyleSheet("QWidget#widget_23{\n"
 "    max-height:40px;\n"
 "    min-height:40px;\n"
@@ -1396,8 +1400,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout_23.setContentsMargins(10, 0, 8, 0)
         self.horizontalLayout_23.setSpacing(6)
         self.horizontalLayout_23.setObjectName("horizontalLayout_23")
-        self.pushButton_31 = QtWidgets.QPushButton(self.widget_23)
-        self.pushButton_31.setStyleSheet("QPushButton{\n"
+        self.friendsPushButton = QtWidgets.QPushButton(self.widget_23)
+        self.friendsPushButton.setStyleSheet("QPushButton{\n"
 "    max-height:25px;\n"
 "    max-width:60px;\n"
 "    min-height:25px;\n"
@@ -1414,13 +1418,13 @@ class Ui_MainWindow(object):
 "    color: rgb(18, 183, 245);\n"
 "    background-color: rgb(236, 250, 255);\n"
 "}")
-        self.pushButton_31.setCheckable(True)
-        self.pushButton_31.setChecked(True)
-        self.pushButton_31.setAutoExclusive(True)
-        self.pushButton_31.setObjectName("pushButton_31")
-        self.horizontalLayout_23.addWidget(self.pushButton_31)
-        self.pushButton_32 = QtWidgets.QPushButton(self.widget_23)
-        self.pushButton_32.setStyleSheet("QPushButton{\n"
+        self.friendsPushButton.setCheckable(True)
+        self.friendsPushButton.setChecked(True)
+        self.friendsPushButton.setAutoExclusive(True)
+        self.friendsPushButton.setObjectName("friendsPushButton")
+        self.horizontalLayout_23.addWidget(self.friendsPushButton)
+        self.groupChatPushButton = QtWidgets.QPushButton(self.widget_23)
+        self.groupChatPushButton.setStyleSheet("QPushButton{\n"
 "    max-height:25px;\n"
 "    max-width:60px;\n"
 "    min-height:25px;\n"
@@ -1437,10 +1441,10 @@ class Ui_MainWindow(object):
 "    color: rgb(18, 183, 245);\n"
 "    background-color: rgb(236, 250, 255);\n"
 "}")
-        self.pushButton_32.setCheckable(True)
-        self.pushButton_32.setAutoExclusive(True)
-        self.pushButton_32.setObjectName("pushButton_32")
-        self.horizontalLayout_23.addWidget(self.pushButton_32)
+        self.groupChatPushButton.setCheckable(True)
+        self.groupChatPushButton.setAutoExclusive(True)
+        self.groupChatPushButton.setObjectName("groupChatPushButton")
+        self.horizontalLayout_23.addWidget(self.groupChatPushButton)
         spacerItem2 = QtWidgets.QSpacerItem(410, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_23.addItem(spacerItem2)
         self.horizontalLayout_22 = QtWidgets.QHBoxLayout()
@@ -1478,29 +1482,30 @@ class Ui_MainWindow(object):
         self.horizontalLayout_22.addWidget(self.pushButton_33)
         self.horizontalLayout_23.addLayout(self.horizontalLayout_22)
         self.verticalLayout_34.addWidget(self.widget_23)
-        self.stackedWidget_2 = QtWidgets.QStackedWidget(self.page_2)
+        self.stackedWidget_2 = QtWidgets.QStackedWidget(self.contactsPage)
         self.stackedWidget_2.setObjectName("stackedWidget_2")
-        self.page_3 = QtWidgets.QWidget()
-        self.page_3.setObjectName("page_3")
-        self.horizontalLayout_24 = QtWidgets.QHBoxLayout(self.page_3)
+        self.friendsPage = QtWidgets.QWidget()
+        self.friendsPage.setObjectName("friendsPage")
+        self.horizontalLayout_24 = QtWidgets.QHBoxLayout(self.friendsPage)
         self.horizontalLayout_24.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_24.setSpacing(0)
         self.horizontalLayout_24.setObjectName("horizontalLayout_24")
-        self.scrollArea_2 = QtWidgets.QScrollArea(self.page_3)
+        self.scrollArea_2 = QtWidgets.QScrollArea(self.friendsPage)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.scrollArea_2.sizePolicy().hasHeightForWidth())
         self.scrollArea_2.setSizePolicy(sizePolicy)
+        self.scrollArea_2.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 536, 1052))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 599, 1052))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
-        self.verticalLayout_41 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)
-        self.verticalLayout_41.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_41.setSpacing(0)
-        self.verticalLayout_41.setObjectName("verticalLayout_41")
+        self.friendsVerticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)
+        self.friendsVerticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.friendsVerticalLayout.setSpacing(0)
+        self.friendsVerticalLayout.setObjectName("friendsVerticalLayout")
         self.widget_32 = QtWidgets.QWidget(self.scrollAreaWidgetContents_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -1512,41 +1517,62 @@ class Ui_MainWindow(object):
         self.verticalLayout_48.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_48.setSpacing(0)
         self.verticalLayout_48.setObjectName("verticalLayout_48")
-        self.pushButton_36 = QtWidgets.QPushButton(self.widget_32)
-        self.pushButton_36.setStyleSheet("QPushButton{\n"
+        self.newFriendsPushButtonWidget = QtWidgets.QWidget(self.widget_32)
+        self.newFriendsPushButtonWidget.setMinimumSize(QtCore.QSize(0, 34))
+        self.newFriendsPushButtonWidget.setStyleSheet("QWidget{\n"
 "    max-height:34px;\n"
 "    min-height:34px;\n"
+"}\n"
+"QWidget:hover{\n"
+"    background-color: rgb(242, 242, 242);\n"
+"}")
+        self.newFriendsPushButtonWidget.setObjectName("newFriendsPushButtonWidget")
+        self.horizontalLayout_76 = QtWidgets.QHBoxLayout(self.newFriendsPushButtonWidget)
+        self.horizontalLayout_76.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_76.setSpacing(5)
+        self.horizontalLayout_76.setObjectName("horizontalLayout_76")
+        self.newFriendsPushButton = QtWidgets.QPushButton(self.newFriendsPushButtonWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.newFriendsPushButton.sizePolicy().hasHeightForWidth())
+        self.newFriendsPushButton.setSizePolicy(sizePolicy)
+        self.newFriendsPushButton.setStyleSheet("QPushButton{\n"
 "    text-align:left;\n"
 "    font-size:14px;\n"
 "    border:none;\n"
 "    padding-left:9px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    background-color: rgb(242, 242, 242);\n"
 "}")
         icon29 = QtGui.QIcon()
         icon29.addPixmap(QtGui.QPixmap(":/icon/icon/箭头右.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.pushButton_36.setIcon(icon29)
-        self.pushButton_36.setObjectName("pushButton_36")
-        self.verticalLayout_48.addWidget(self.pushButton_36)
-        self.widget_33 = QtWidgets.QWidget(self.widget_32)
-        self.widget_33.setStyleSheet("QWidget#widget_33{\n"
+        self.newFriendsPushButton.setIcon(icon29)
+        self.newFriendsPushButton.setCheckable(True)
+        self.newFriendsPushButton.setChecked(False)
+        self.newFriendsPushButton.setObjectName("newFriendsPushButton")
+        self.horizontalLayout_76.addWidget(self.newFriendsPushButton)
+        self.label_152 = QtWidgets.QLabel(self.newFriendsPushButtonWidget)
+        self.label_152.setText("")
+        self.label_152.setObjectName("label_152")
+        self.horizontalLayout_76.addWidget(self.label_152)
+        self.verticalLayout_48.addWidget(self.newFriendsPushButtonWidget)
+        self.newFriendsWidget = QtWidgets.QWidget(self.widget_32)
+        self.newFriendsWidget.setStyleSheet("QWidget#newFriendsWidget{\n"
 "    max-height:76px;\n"
 "    min-height:76px;\n"
 "}")
-        self.widget_33.setObjectName("widget_33")
-        self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.widget_33)
-        self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_7.setSpacing(0)
-        self.verticalLayout_7.setObjectName("verticalLayout_7")
-        self.label_87 = QtWidgets.QLabel(self.widget_33)
+        self.newFriendsWidget.setObjectName("newFriendsWidget")
+        self.newFriendsVerticalLayout = QtWidgets.QVBoxLayout(self.newFriendsWidget)
+        self.newFriendsVerticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.newFriendsVerticalLayout.setSpacing(0)
+        self.newFriendsVerticalLayout.setObjectName("newFriendsVerticalLayout")
+        self.label_87 = QtWidgets.QLabel(self.newFriendsWidget)
         self.label_87.setStyleSheet("QLabel{\n"
 "    image: url(:/icon/icon/暂时没有可能认识的人.svg);\n"
 "}")
         self.label_87.setText("")
         self.label_87.setObjectName("label_87")
-        self.verticalLayout_7.addWidget(self.label_87)
-        self.label_86 = QtWidgets.QLabel(self.widget_33)
+        self.newFriendsVerticalLayout.addWidget(self.label_87)
+        self.label_86 = QtWidgets.QLabel(self.newFriendsWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1557,9 +1583,9 @@ class Ui_MainWindow(object):
 "}")
         self.label_86.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.label_86.setObjectName("label_86")
-        self.verticalLayout_7.addWidget(self.label_86)
-        self.verticalLayout_48.addWidget(self.widget_33)
-        self.verticalLayout_41.addWidget(self.widget_32)
+        self.newFriendsVerticalLayout.addWidget(self.label_86)
+        self.verticalLayout_48.addWidget(self.newFriendsWidget)
+        self.friendsVerticalLayout.addWidget(self.widget_32)
         self.widget_28 = QtWidgets.QWidget(self.scrollAreaWidgetContents_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -1571,28 +1597,49 @@ class Ui_MainWindow(object):
         self.verticalLayout_42.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_42.setSpacing(0)
         self.verticalLayout_42.setObjectName("verticalLayout_42")
-        self.pushButton_35 = QtWidgets.QPushButton(self.widget_28)
-        self.pushButton_35.setStyleSheet("QPushButton{\n"
+        self.myDevicePushButtonWidget = QtWidgets.QWidget(self.widget_28)
+        self.myDevicePushButtonWidget.setMinimumSize(QtCore.QSize(0, 34))
+        self.myDevicePushButtonWidget.setStyleSheet("QWidget{\n"
 "    max-height:34px;\n"
 "    min-height:34px;\n"
+"}\n"
+"QWidget:hover{\n"
+"    background-color: rgb(242, 242, 242);\n"
+"}")
+        self.myDevicePushButtonWidget.setObjectName("myDevicePushButtonWidget")
+        self.horizontalLayout_67 = QtWidgets.QHBoxLayout(self.myDevicePushButtonWidget)
+        self.horizontalLayout_67.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_67.setSpacing(5)
+        self.horizontalLayout_67.setObjectName("horizontalLayout_67")
+        self.myDevicePushButton = QtWidgets.QPushButton(self.myDevicePushButtonWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.myDevicePushButton.sizePolicy().hasHeightForWidth())
+        self.myDevicePushButton.setSizePolicy(sizePolicy)
+        self.myDevicePushButton.setStyleSheet("QPushButton{\n"
 "    text-align:left;\n"
 "    font-size:14px;\n"
 "    border:none;\n"
 "    padding-left:9px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    background-color: rgb(242, 242, 242);\n"
 "}")
-        self.pushButton_35.setIcon(icon29)
-        self.pushButton_35.setObjectName("pushButton_35")
-        self.verticalLayout_42.addWidget(self.pushButton_35)
-        self.widget_29 = QtWidgets.QWidget(self.widget_28)
-        self.widget_29.setObjectName("widget_29")
-        self.verticalLayout_43 = QtWidgets.QVBoxLayout(self.widget_29)
-        self.verticalLayout_43.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_43.setSpacing(0)
-        self.verticalLayout_43.setObjectName("verticalLayout_43")
-        self.widget_30 = QtWidgets.QWidget(self.widget_29)
+        self.myDevicePushButton.setIcon(icon29)
+        self.myDevicePushButton.setCheckable(True)
+        self.myDevicePushButton.setChecked(False)
+        self.myDevicePushButton.setObjectName("myDevicePushButton")
+        self.horizontalLayout_67.addWidget(self.myDevicePushButton)
+        self.label_151 = QtWidgets.QLabel(self.myDevicePushButtonWidget)
+        self.label_151.setObjectName("label_151")
+        self.horizontalLayout_67.addWidget(self.label_151)
+        self.verticalLayout_42.addWidget(self.myDevicePushButtonWidget)
+        self.myDeviceWidget = QtWidgets.QWidget(self.widget_28)
+        self.myDeviceWidget.setMinimumSize(QtCore.QSize(0, 100))
+        self.myDeviceWidget.setObjectName("myDeviceWidget")
+        self.myDeviceVerticalLayout = QtWidgets.QVBoxLayout(self.myDeviceWidget)
+        self.myDeviceVerticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.myDeviceVerticalLayout.setSpacing(0)
+        self.myDeviceVerticalLayout.setObjectName("myDeviceVerticalLayout")
+        self.widget_30 = QtWidgets.QWidget(self.myDeviceWidget)
         self.widget_30.setStyleSheet("QWidget#widget_30{\n"
 "    max-height:60px;\n"
 "    min-height:60px;\n"
@@ -1640,9 +1687,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_45.setObjectName("verticalLayout_45")
         self.horizontalLayout_27.addLayout(self.verticalLayout_45)
         self.horizontalLayout_27.setStretch(1, 1)
-        self.verticalLayout_43.addWidget(self.widget_30)
-        self.verticalLayout_42.addWidget(self.widget_29)
-        self.widget_34 = QtWidgets.QWidget(self.widget_28)
+        self.myDeviceVerticalLayout.addWidget(self.widget_30)
+        self.widget_34 = QtWidgets.QWidget(self.myDeviceWidget)
         self.widget_34.setStyleSheet("QWidget#widget_34{\n"
 "    max-height:60px;\n"
 "    min-height:60px;\n"
@@ -1691,8 +1737,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_50.setObjectName("verticalLayout_50")
         self.horizontalLayout_29.addLayout(self.verticalLayout_50)
         self.horizontalLayout_29.setStretch(1, 1)
-        self.verticalLayout_42.addWidget(self.widget_34)
-        self.verticalLayout_41.addWidget(self.widget_28)
+        self.myDeviceVerticalLayout.addWidget(self.widget_34)
+        self.verticalLayout_42.addWidget(self.myDeviceWidget)
+        self.friendsVerticalLayout.addWidget(self.widget_28)
         self.widget_24 = QtWidgets.QWidget(self.scrollAreaWidgetContents_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -1704,28 +1751,48 @@ class Ui_MainWindow(object):
         self.verticalLayout_40.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_40.setSpacing(0)
         self.verticalLayout_40.setObjectName("verticalLayout_40")
-        self.pushButton_34 = QtWidgets.QPushButton(self.widget_24)
-        self.pushButton_34.setStyleSheet("QPushButton{\n"
+        self.familyPushButtonWidget = QtWidgets.QWidget(self.widget_24)
+        self.familyPushButtonWidget.setMinimumSize(QtCore.QSize(0, 34))
+        self.familyPushButtonWidget.setStyleSheet("QWidget{\n"
 "    max-height:34px;\n"
 "    min-height:34px;\n"
+"}\n"
+"QWidget:hover{\n"
+"    background-color: rgb(242, 242, 242);\n"
+"}")
+        self.familyPushButtonWidget.setObjectName("familyPushButtonWidget")
+        self.horizontalLayout_78 = QtWidgets.QHBoxLayout(self.familyPushButtonWidget)
+        self.horizontalLayout_78.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_78.setSpacing(5)
+        self.horizontalLayout_78.setObjectName("horizontalLayout_78")
+        self.familyPushButton = QtWidgets.QPushButton(self.familyPushButtonWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.familyPushButton.sizePolicy().hasHeightForWidth())
+        self.familyPushButton.setSizePolicy(sizePolicy)
+        self.familyPushButton.setStyleSheet("QPushButton{\n"
 "    text-align:left;\n"
 "    font-size:14px;\n"
 "    border:none;\n"
 "    padding-left:9px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    background-color: rgb(242, 242, 242);\n"
 "}")
-        self.pushButton_34.setIcon(icon29)
-        self.pushButton_34.setObjectName("pushButton_34")
-        self.verticalLayout_40.addWidget(self.pushButton_34)
-        self.widget_25 = QtWidgets.QWidget(self.widget_24)
-        self.widget_25.setObjectName("widget_25")
-        self.verticalLayout_39 = QtWidgets.QVBoxLayout(self.widget_25)
-        self.verticalLayout_39.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_39.setSpacing(0)
-        self.verticalLayout_39.setObjectName("verticalLayout_39")
-        self.widget_31 = QtWidgets.QWidget(self.widget_25)
+        self.familyPushButton.setIcon(icon29)
+        self.familyPushButton.setCheckable(True)
+        self.familyPushButton.setChecked(False)
+        self.familyPushButton.setObjectName("familyPushButton")
+        self.horizontalLayout_78.addWidget(self.familyPushButton)
+        self.label_154 = QtWidgets.QLabel(self.familyPushButtonWidget)
+        self.label_154.setObjectName("label_154")
+        self.horizontalLayout_78.addWidget(self.label_154)
+        self.verticalLayout_40.addWidget(self.familyPushButtonWidget)
+        self.familyWidget = QtWidgets.QWidget(self.widget_24)
+        self.familyWidget.setObjectName("familyWidget")
+        self.familyVerticalLayout = QtWidgets.QVBoxLayout(self.familyWidget)
+        self.familyVerticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.familyVerticalLayout.setSpacing(0)
+        self.familyVerticalLayout.setObjectName("familyVerticalLayout")
+        self.widget_31 = QtWidgets.QWidget(self.familyWidget)
         self.widget_31.setStyleSheet("QWidget#widget_31{\n"
 "    max-height:60px;\n"
 "    min-height:60px;\n"
@@ -1797,8 +1864,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_47.addWidget(self.pushButton_38)
         self.horizontalLayout_28.addLayout(self.verticalLayout_47)
         self.horizontalLayout_28.setStretch(1, 1)
-        self.verticalLayout_39.addWidget(self.widget_31)
-        self.widget_35 = QtWidgets.QWidget(self.widget_25)
+        self.familyVerticalLayout.addWidget(self.widget_31)
+        self.widget_35 = QtWidgets.QWidget(self.familyWidget)
         self.widget_35.setStyleSheet("QWidget#widget_35{\n"
 "    max-height:60px;\n"
 "    min-height:60px;\n"
@@ -1868,8 +1935,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_52.addWidget(self.pushButton_40)
         self.horizontalLayout_30.addLayout(self.verticalLayout_52)
         self.horizontalLayout_30.setStretch(1, 1)
-        self.verticalLayout_39.addWidget(self.widget_35)
-        self.widget_36 = QtWidgets.QWidget(self.widget_25)
+        self.familyVerticalLayout.addWidget(self.widget_35)
+        self.widget_36 = QtWidgets.QWidget(self.familyWidget)
         self.widget_36.setEnabled(True)
         self.widget_36.setStyleSheet("QWidget#widget_36{\n"
 "    max-height:60px;\n"
@@ -1940,8 +2007,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_54.addWidget(self.pushButton_41)
         self.horizontalLayout_31.addLayout(self.verticalLayout_54)
         self.horizontalLayout_31.setStretch(1, 1)
-        self.verticalLayout_39.addWidget(self.widget_36)
-        self.widget_37 = QtWidgets.QWidget(self.widget_25)
+        self.familyVerticalLayout.addWidget(self.widget_36)
+        self.widget_37 = QtWidgets.QWidget(self.familyWidget)
         self.widget_37.setEnabled(True)
         self.widget_37.setStyleSheet("QWidget#widget_37{\n"
 "    max-height:60px;\n"
@@ -2013,9 +2080,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_56.addWidget(self.pushButton_62)
         self.horizontalLayout_32.addLayout(self.verticalLayout_56)
         self.horizontalLayout_32.setStretch(1, 1)
-        self.verticalLayout_39.addWidget(self.widget_37)
-        self.verticalLayout_40.addWidget(self.widget_25)
-        self.verticalLayout_41.addWidget(self.widget_24, 0, QtCore.Qt.AlignTop)
+        self.familyVerticalLayout.addWidget(self.widget_37)
+        self.verticalLayout_40.addWidget(self.familyWidget)
+        self.friendsVerticalLayout.addWidget(self.widget_24, 0, QtCore.Qt.AlignTop)
         self.widget_26 = QtWidgets.QWidget(self.scrollAreaWidgetContents_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -2027,28 +2094,48 @@ class Ui_MainWindow(object):
         self.verticalLayout_57.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_57.setSpacing(0)
         self.verticalLayout_57.setObjectName("verticalLayout_57")
-        self.pushButton_37 = QtWidgets.QPushButton(self.widget_26)
-        self.pushButton_37.setStyleSheet("QPushButton{\n"
+        self.myFriendPushButtonWidget = QtWidgets.QWidget(self.widget_26)
+        self.myFriendPushButtonWidget.setMinimumSize(QtCore.QSize(0, 34))
+        self.myFriendPushButtonWidget.setStyleSheet("QWidget{\n"
 "    max-height:34px;\n"
 "    min-height:34px;\n"
+"}\n"
+"QWidget:hover{\n"
+"    background-color: rgb(242, 242, 242);\n"
+"}")
+        self.myFriendPushButtonWidget.setObjectName("myFriendPushButtonWidget")
+        self.horizontalLayout_79 = QtWidgets.QHBoxLayout(self.myFriendPushButtonWidget)
+        self.horizontalLayout_79.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_79.setSpacing(5)
+        self.horizontalLayout_79.setObjectName("horizontalLayout_79")
+        self.myFriendPushButton = QtWidgets.QPushButton(self.myFriendPushButtonWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.myFriendPushButton.sizePolicy().hasHeightForWidth())
+        self.myFriendPushButton.setSizePolicy(sizePolicy)
+        self.myFriendPushButton.setStyleSheet("QPushButton{\n"
 "    text-align:left;\n"
 "    font-size:14px;\n"
 "    border:none;\n"
 "    padding-left:9px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    background-color: rgb(242, 242, 242);\n"
 "}")
-        self.pushButton_37.setIcon(icon29)
-        self.pushButton_37.setObjectName("pushButton_37")
-        self.verticalLayout_57.addWidget(self.pushButton_37)
-        self.widget_27 = QtWidgets.QWidget(self.widget_26)
-        self.widget_27.setObjectName("widget_27")
-        self.verticalLayout_58 = QtWidgets.QVBoxLayout(self.widget_27)
-        self.verticalLayout_58.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_58.setSpacing(0)
-        self.verticalLayout_58.setObjectName("verticalLayout_58")
-        self.widget_38 = QtWidgets.QWidget(self.widget_27)
+        self.myFriendPushButton.setIcon(icon29)
+        self.myFriendPushButton.setCheckable(True)
+        self.myFriendPushButton.setChecked(False)
+        self.myFriendPushButton.setObjectName("myFriendPushButton")
+        self.horizontalLayout_79.addWidget(self.myFriendPushButton)
+        self.label_155 = QtWidgets.QLabel(self.myFriendPushButtonWidget)
+        self.label_155.setObjectName("label_155")
+        self.horizontalLayout_79.addWidget(self.label_155)
+        self.verticalLayout_57.addWidget(self.myFriendPushButtonWidget)
+        self.myFriendWidget = QtWidgets.QWidget(self.widget_26)
+        self.myFriendWidget.setObjectName("myFriendWidget")
+        self.myFriendVerticalLayout = QtWidgets.QVBoxLayout(self.myFriendWidget)
+        self.myFriendVerticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.myFriendVerticalLayout.setSpacing(0)
+        self.myFriendVerticalLayout.setObjectName("myFriendVerticalLayout")
+        self.widget_38 = QtWidgets.QWidget(self.myFriendWidget)
         self.widget_38.setStyleSheet("QWidget#widget_38{\n"
 "    max-height:60px;\n"
 "    min-height:60px;\n"
@@ -2150,8 +2237,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_60.addWidget(self.pushButton_39)
         self.horizontalLayout_33.addLayout(self.verticalLayout_60)
         self.horizontalLayout_33.setStretch(1, 1)
-        self.verticalLayout_58.addWidget(self.widget_38)
-        self.widget_42 = QtWidgets.QWidget(self.widget_27)
+        self.myFriendVerticalLayout.addWidget(self.widget_38)
+        self.widget_42 = QtWidgets.QWidget(self.myFriendWidget)
         self.widget_42.setStyleSheet("QWidget#widget_42{\n"
 "    max-height:60px;\n"
 "    min-height:60px;\n"
@@ -2253,8 +2340,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_70.addWidget(self.pushButton_76)
         self.horizontalLayout_38.addLayout(self.verticalLayout_70)
         self.horizontalLayout_38.setStretch(1, 1)
-        self.verticalLayout_58.addWidget(self.widget_42)
-        self.widget_43 = QtWidgets.QWidget(self.widget_27)
+        self.myFriendVerticalLayout.addWidget(self.widget_42)
+        self.widget_43 = QtWidgets.QWidget(self.myFriendWidget)
         self.widget_43.setStyleSheet("QWidget#widget_43{\n"
 "    max-height:60px;\n"
 "    min-height:60px;\n"
@@ -2354,8 +2441,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_72.addWidget(self.pushButton_79)
         self.horizontalLayout_40.addLayout(self.verticalLayout_72)
         self.horizontalLayout_40.setStretch(1, 1)
-        self.verticalLayout_58.addWidget(self.widget_43)
-        self.widget_39 = QtWidgets.QWidget(self.widget_27)
+        self.myFriendVerticalLayout.addWidget(self.widget_43)
+        self.widget_39 = QtWidgets.QWidget(self.myFriendWidget)
         self.widget_39.setStyleSheet("QWidget#widget_39{\n"
 "    max-height:60px;\n"
 "    min-height:60px;\n"
@@ -2425,8 +2512,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_62.addWidget(self.pushButton_65)
         self.horizontalLayout_34.addLayout(self.verticalLayout_62)
         self.horizontalLayout_34.setStretch(1, 1)
-        self.verticalLayout_58.addWidget(self.widget_39)
-        self.widget_40 = QtWidgets.QWidget(self.widget_27)
+        self.myFriendVerticalLayout.addWidget(self.widget_39)
+        self.widget_40 = QtWidgets.QWidget(self.myFriendWidget)
         self.widget_40.setEnabled(True)
         self.widget_40.setStyleSheet("QWidget#widget_40{\n"
 "    max-height:60px;\n"
@@ -2497,8 +2584,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_64.addWidget(self.pushButton_67)
         self.horizontalLayout_35.addLayout(self.verticalLayout_64)
         self.horizontalLayout_35.setStretch(1, 1)
-        self.verticalLayout_58.addWidget(self.widget_40)
-        self.widget_41 = QtWidgets.QWidget(self.widget_27)
+        self.myFriendVerticalLayout.addWidget(self.widget_40)
+        self.widget_41 = QtWidgets.QWidget(self.myFriendWidget)
         self.widget_41.setEnabled(True)
         self.widget_41.setStyleSheet("QWidget#widget_41{\n"
 "    max-height:60px;\n"
@@ -2570,8 +2657,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_66.addWidget(self.pushButton_69)
         self.horizontalLayout_36.addLayout(self.verticalLayout_66)
         self.horizontalLayout_36.setStretch(1, 1)
-        self.verticalLayout_58.addWidget(self.widget_41)
-        self.widget_44 = QtWidgets.QWidget(self.widget_27)
+        self.myFriendVerticalLayout.addWidget(self.widget_41)
+        self.widget_44 = QtWidgets.QWidget(self.myFriendWidget)
         self.widget_44.setEnabled(True)
         self.widget_44.setStyleSheet("QWidget#widget_44{\n"
 "    max-height:60px;\n"
@@ -2643,8 +2730,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_74.addWidget(self.pushButton_81)
         self.horizontalLayout_42.addLayout(self.verticalLayout_74)
         self.horizontalLayout_42.setStretch(1, 1)
-        self.verticalLayout_58.addWidget(self.widget_44)
-        self.widget_45 = QtWidgets.QWidget(self.widget_27)
+        self.myFriendVerticalLayout.addWidget(self.widget_44)
+        self.widget_45 = QtWidgets.QWidget(self.myFriendWidget)
         self.widget_45.setEnabled(True)
         self.widget_45.setStyleSheet("QWidget#widget_45{\n"
 "    max-height:60px;\n"
@@ -2716,28 +2803,29 @@ class Ui_MainWindow(object):
         self.verticalLayout_76.addWidget(self.pushButton_83)
         self.horizontalLayout_43.addLayout(self.verticalLayout_76)
         self.horizontalLayout_43.setStretch(1, 1)
-        self.verticalLayout_58.addWidget(self.widget_45)
-        self.verticalLayout_57.addWidget(self.widget_27)
-        self.verticalLayout_41.addWidget(self.widget_26)
+        self.myFriendVerticalLayout.addWidget(self.widget_45)
+        self.verticalLayout_57.addWidget(self.myFriendWidget)
+        self.friendsVerticalLayout.addWidget(self.widget_26, 0, QtCore.Qt.AlignTop)
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
         self.horizontalLayout_24.addWidget(self.scrollArea_2)
-        self.stackedWidget_2.addWidget(self.page_3)
-        self.page_4 = QtWidgets.QWidget()
-        self.page_4.setObjectName("page_4")
-        self.horizontalLayout_26 = QtWidgets.QHBoxLayout(self.page_4)
+        self.stackedWidget_2.addWidget(self.friendsPage)
+        self.groupChatPage = QtWidgets.QWidget()
+        self.groupChatPage.setObjectName("groupChatPage")
+        self.horizontalLayout_26 = QtWidgets.QHBoxLayout(self.groupChatPage)
         self.horizontalLayout_26.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_26.setSpacing(0)
         self.horizontalLayout_26.setObjectName("horizontalLayout_26")
-        self.scrollArea_3 = QtWidgets.QScrollArea(self.page_4)
+        self.scrollArea_3 = QtWidgets.QScrollArea(self.groupChatPage)
+        self.scrollArea_3.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollArea_3.setObjectName("scrollArea_3")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 191, 438))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 606, 447))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
-        self.verticalLayout_35 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
-        self.verticalLayout_35.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_35.setSpacing(0)
-        self.verticalLayout_35.setObjectName("verticalLayout_35")
+        self.groupChatVerticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
+        self.groupChatVerticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.groupChatVerticalLayout.setSpacing(0)
+        self.groupChatVerticalLayout.setObjectName("groupChatVerticalLayout")
         self.widget_49 = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -2749,28 +2837,48 @@ class Ui_MainWindow(object):
         self.verticalLayout_77.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_77.setSpacing(0)
         self.verticalLayout_77.setObjectName("verticalLayout_77")
-        self.pushButton_84 = QtWidgets.QPushButton(self.widget_49)
-        self.pushButton_84.setStyleSheet("QPushButton{\n"
+        self.createdGroupChatPushButtonWidget = QtWidgets.QWidget(self.widget_49)
+        self.createdGroupChatPushButtonWidget.setMinimumSize(QtCore.QSize(0, 34))
+        self.createdGroupChatPushButtonWidget.setStyleSheet("QWidget{\n"
 "    max-height:34px;\n"
 "    min-height:34px;\n"
+"}\n"
+"QWidget:hover{\n"
+"    background-color: rgb(242, 242, 242);\n"
+"}")
+        self.createdGroupChatPushButtonWidget.setObjectName("createdGroupChatPushButtonWidget")
+        self.horizontalLayout_77 = QtWidgets.QHBoxLayout(self.createdGroupChatPushButtonWidget)
+        self.horizontalLayout_77.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_77.setSpacing(5)
+        self.horizontalLayout_77.setObjectName("horizontalLayout_77")
+        self.createdGroupChatPushButton = QtWidgets.QPushButton(self.createdGroupChatPushButtonWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.createdGroupChatPushButton.sizePolicy().hasHeightForWidth())
+        self.createdGroupChatPushButton.setSizePolicy(sizePolicy)
+        self.createdGroupChatPushButton.setStyleSheet("QPushButton{\n"
 "    text-align:left;\n"
 "    font-size:14px;\n"
 "    border:none;\n"
 "    padding-left:9px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    background-color: rgb(242, 242, 242);\n"
 "}")
-        self.pushButton_84.setIcon(icon29)
-        self.pushButton_84.setObjectName("pushButton_84")
-        self.verticalLayout_77.addWidget(self.pushButton_84)
-        self.widget_50 = QtWidgets.QWidget(self.widget_49)
-        self.widget_50.setObjectName("widget_50")
-        self.verticalLayout_78 = QtWidgets.QVBoxLayout(self.widget_50)
-        self.verticalLayout_78.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_78.setSpacing(0)
-        self.verticalLayout_78.setObjectName("verticalLayout_78")
-        self.widget_51 = QtWidgets.QWidget(self.widget_50)
+        self.createdGroupChatPushButton.setIcon(icon29)
+        self.createdGroupChatPushButton.setCheckable(True)
+        self.createdGroupChatPushButton.setChecked(False)
+        self.createdGroupChatPushButton.setObjectName("createdGroupChatPushButton")
+        self.horizontalLayout_77.addWidget(self.createdGroupChatPushButton)
+        self.label_153 = QtWidgets.QLabel(self.createdGroupChatPushButtonWidget)
+        self.label_153.setObjectName("label_153")
+        self.horizontalLayout_77.addWidget(self.label_153)
+        self.verticalLayout_77.addWidget(self.createdGroupChatPushButtonWidget)
+        self.createdGroupChatWidget = QtWidgets.QWidget(self.widget_49)
+        self.createdGroupChatWidget.setObjectName("createdGroupChatWidget")
+        self.createdGroupChatVerticalLayout = QtWidgets.QVBoxLayout(self.createdGroupChatWidget)
+        self.createdGroupChatVerticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.createdGroupChatVerticalLayout.setSpacing(0)
+        self.createdGroupChatVerticalLayout.setObjectName("createdGroupChatVerticalLayout")
+        self.widget_51 = QtWidgets.QWidget(self.createdGroupChatWidget)
         self.widget_51.setStyleSheet("QWidget#widget_51{\n"
 "    max-height:42px;\n"
 "    min-height:42px;\n"
@@ -2816,8 +2924,8 @@ class Ui_MainWindow(object):
         self.label_4.setObjectName("label_4")
         self.horizontalLayout_44.addWidget(self.label_4)
         self.horizontalLayout_44.setStretch(1, 1)
-        self.verticalLayout_78.addWidget(self.widget_51)
-        self.widget_56 = QtWidgets.QWidget(self.widget_50)
+        self.createdGroupChatVerticalLayout.addWidget(self.widget_51)
+        self.widget_56 = QtWidgets.QWidget(self.createdGroupChatWidget)
         self.widget_56.setStyleSheet("QWidget#widget_56{\n"
 "    max-height:42px;\n"
 "    min-height:42px;\n"
@@ -2863,9 +2971,9 @@ class Ui_MainWindow(object):
         self.label_19.setObjectName("label_19")
         self.horizontalLayout_51.addWidget(self.label_19)
         self.horizontalLayout_51.setStretch(1, 1)
-        self.verticalLayout_78.addWidget(self.widget_56)
-        self.verticalLayout_77.addWidget(self.widget_50)
-        self.verticalLayout_35.addWidget(self.widget_49)
+        self.createdGroupChatVerticalLayout.addWidget(self.widget_56)
+        self.verticalLayout_77.addWidget(self.createdGroupChatWidget)
+        self.groupChatVerticalLayout.addWidget(self.widget_49)
         self.widget_52 = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -2877,28 +2985,48 @@ class Ui_MainWindow(object):
         self.verticalLayout_79.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_79.setSpacing(0)
         self.verticalLayout_79.setObjectName("verticalLayout_79")
-        self.pushButton_73 = QtWidgets.QPushButton(self.widget_52)
-        self.pushButton_73.setStyleSheet("QPushButton{\n"
+        self.managedGroupChatPushButtonWidget = QtWidgets.QWidget(self.widget_52)
+        self.managedGroupChatPushButtonWidget.setMinimumSize(QtCore.QSize(0, 34))
+        self.managedGroupChatPushButtonWidget.setStyleSheet("QWidget{\n"
 "    max-height:34px;\n"
 "    min-height:34px;\n"
+"}\n"
+"QWidget:hover{\n"
+"    background-color: rgb(242, 242, 242);\n"
+"}")
+        self.managedGroupChatPushButtonWidget.setObjectName("managedGroupChatPushButtonWidget")
+        self.horizontalLayout_80 = QtWidgets.QHBoxLayout(self.managedGroupChatPushButtonWidget)
+        self.horizontalLayout_80.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_80.setSpacing(5)
+        self.horizontalLayout_80.setObjectName("horizontalLayout_80")
+        self.managedGroupChatPushButton = QtWidgets.QPushButton(self.managedGroupChatPushButtonWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.managedGroupChatPushButton.sizePolicy().hasHeightForWidth())
+        self.managedGroupChatPushButton.setSizePolicy(sizePolicy)
+        self.managedGroupChatPushButton.setStyleSheet("QPushButton{\n"
 "    text-align:left;\n"
 "    font-size:14px;\n"
 "    border:none;\n"
 "    padding-left:9px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    background-color: rgb(242, 242, 242);\n"
 "}")
-        self.pushButton_73.setIcon(icon29)
-        self.pushButton_73.setObjectName("pushButton_73")
-        self.verticalLayout_79.addWidget(self.pushButton_73)
-        self.widget_54 = QtWidgets.QWidget(self.widget_52)
-        self.widget_54.setObjectName("widget_54")
-        self.verticalLayout_80 = QtWidgets.QVBoxLayout(self.widget_54)
-        self.verticalLayout_80.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_80.setSpacing(0)
-        self.verticalLayout_80.setObjectName("verticalLayout_80")
-        self.widget_58 = QtWidgets.QWidget(self.widget_54)
+        self.managedGroupChatPushButton.setIcon(icon29)
+        self.managedGroupChatPushButton.setCheckable(True)
+        self.managedGroupChatPushButton.setChecked(False)
+        self.managedGroupChatPushButton.setObjectName("managedGroupChatPushButton")
+        self.horizontalLayout_80.addWidget(self.managedGroupChatPushButton)
+        self.label_156 = QtWidgets.QLabel(self.managedGroupChatPushButtonWidget)
+        self.label_156.setObjectName("label_156")
+        self.horizontalLayout_80.addWidget(self.label_156)
+        self.verticalLayout_79.addWidget(self.managedGroupChatPushButtonWidget)
+        self.managedGroupChatWidget = QtWidgets.QWidget(self.widget_52)
+        self.managedGroupChatWidget.setObjectName("managedGroupChatWidget")
+        self.managedGroupChatVerticalLayout = QtWidgets.QVBoxLayout(self.managedGroupChatWidget)
+        self.managedGroupChatVerticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.managedGroupChatVerticalLayout.setSpacing(0)
+        self.managedGroupChatVerticalLayout.setObjectName("managedGroupChatVerticalLayout")
+        self.widget_58 = QtWidgets.QWidget(self.managedGroupChatWidget)
         self.widget_58.setStyleSheet("QWidget#widget_58{\n"
 "    max-height:42px;\n"
 "    min-height:42px;\n"
@@ -2960,8 +3088,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_43.setObjectName("label_43")
         self.horizontalLayout_49.addWidget(self.label_43)
-        self.verticalLayout_80.addWidget(self.widget_58)
-        self.widget_59 = QtWidgets.QWidget(self.widget_54)
+        self.managedGroupChatVerticalLayout.addWidget(self.widget_58)
+        self.widget_59 = QtWidgets.QWidget(self.managedGroupChatWidget)
         self.widget_59.setStyleSheet("QWidget#widget_59{\n"
 "    max-height:42px;\n"
 "    min-height:42px;\n"
@@ -3007,9 +3135,9 @@ class Ui_MainWindow(object):
         self.label_33.setObjectName("label_33")
         self.horizontalLayout_45.addWidget(self.label_33)
         self.horizontalLayout_45.setStretch(1, 1)
-        self.verticalLayout_80.addWidget(self.widget_59)
-        self.verticalLayout_79.addWidget(self.widget_54)
-        self.verticalLayout_35.addWidget(self.widget_52)
+        self.managedGroupChatVerticalLayout.addWidget(self.widget_59)
+        self.verticalLayout_79.addWidget(self.managedGroupChatWidget)
+        self.groupChatVerticalLayout.addWidget(self.widget_52)
         self.widget_46 = QtWidgets.QWidget(self.scrollAreaWidgetContents_3)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -3021,28 +3149,48 @@ class Ui_MainWindow(object):
         self.verticalLayout_67.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_67.setSpacing(0)
         self.verticalLayout_67.setObjectName("verticalLayout_67")
-        self.pushButton_71 = QtWidgets.QPushButton(self.widget_46)
-        self.pushButton_71.setStyleSheet("QPushButton{\n"
+        self.joinedGroupChatPushButtonWidget = QtWidgets.QWidget(self.widget_46)
+        self.joinedGroupChatPushButtonWidget.setMinimumSize(QtCore.QSize(0, 34))
+        self.joinedGroupChatPushButtonWidget.setStyleSheet("QWidget{\n"
 "    max-height:34px;\n"
 "    min-height:34px;\n"
+"}\n"
+"QWidget:hover{\n"
+"    background-color: rgb(242, 242, 242);\n"
+"}")
+        self.joinedGroupChatPushButtonWidget.setObjectName("joinedGroupChatPushButtonWidget")
+        self.horizontalLayout_81 = QtWidgets.QHBoxLayout(self.joinedGroupChatPushButtonWidget)
+        self.horizontalLayout_81.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_81.setSpacing(5)
+        self.horizontalLayout_81.setObjectName("horizontalLayout_81")
+        self.joinedGroupChatPushButton = QtWidgets.QPushButton(self.joinedGroupChatPushButtonWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.joinedGroupChatPushButton.sizePolicy().hasHeightForWidth())
+        self.joinedGroupChatPushButton.setSizePolicy(sizePolicy)
+        self.joinedGroupChatPushButton.setStyleSheet("QPushButton{\n"
 "    text-align:left;\n"
 "    font-size:14px;\n"
 "    border:none;\n"
 "    padding-left:9px;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    background-color: rgb(242, 242, 242);\n"
 "}")
-        self.pushButton_71.setIcon(icon29)
-        self.pushButton_71.setObjectName("pushButton_71")
-        self.verticalLayout_67.addWidget(self.pushButton_71)
-        self.widget_47 = QtWidgets.QWidget(self.widget_46)
-        self.widget_47.setObjectName("widget_47")
-        self.verticalLayout_68 = QtWidgets.QVBoxLayout(self.widget_47)
-        self.verticalLayout_68.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_68.setSpacing(0)
-        self.verticalLayout_68.setObjectName("verticalLayout_68")
-        self.widget_53 = QtWidgets.QWidget(self.widget_47)
+        self.joinedGroupChatPushButton.setIcon(icon29)
+        self.joinedGroupChatPushButton.setCheckable(True)
+        self.joinedGroupChatPushButton.setChecked(False)
+        self.joinedGroupChatPushButton.setObjectName("joinedGroupChatPushButton")
+        self.horizontalLayout_81.addWidget(self.joinedGroupChatPushButton)
+        self.label_157 = QtWidgets.QLabel(self.joinedGroupChatPushButtonWidget)
+        self.label_157.setObjectName("label_157")
+        self.horizontalLayout_81.addWidget(self.label_157)
+        self.verticalLayout_67.addWidget(self.joinedGroupChatPushButtonWidget)
+        self.joinedGroupChatWidget = QtWidgets.QWidget(self.widget_46)
+        self.joinedGroupChatWidget.setObjectName("joinedGroupChatWidget")
+        self.joinedGroupChatVerticalLayout = QtWidgets.QVBoxLayout(self.joinedGroupChatWidget)
+        self.joinedGroupChatVerticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.joinedGroupChatVerticalLayout.setSpacing(0)
+        self.joinedGroupChatVerticalLayout.setObjectName("joinedGroupChatVerticalLayout")
+        self.widget_53 = QtWidgets.QWidget(self.joinedGroupChatWidget)
         self.widget_53.setStyleSheet("QWidget#widget_53{\n"
 "    max-height:42px;\n"
 "    min-height:42px;\n"
@@ -3088,8 +3236,8 @@ class Ui_MainWindow(object):
         self.label_38.setObjectName("label_38")
         self.horizontalLayout_48.addWidget(self.label_38)
         self.horizontalLayout_48.setStretch(1, 1)
-        self.verticalLayout_68.addWidget(self.widget_53)
-        self.widget_48 = QtWidgets.QWidget(self.widget_47)
+        self.joinedGroupChatVerticalLayout.addWidget(self.widget_53)
+        self.widget_48 = QtWidgets.QWidget(self.joinedGroupChatWidget)
         self.widget_48.setStyleSheet("QWidget#widget_48{\n"
 "    max-height:42px;\n"
 "    min-height:42px;\n"
@@ -3135,8 +3283,8 @@ class Ui_MainWindow(object):
         self.label_29.setObjectName("label_29")
         self.horizontalLayout_37.addWidget(self.label_29)
         self.horizontalLayout_37.setStretch(1, 1)
-        self.verticalLayout_68.addWidget(self.widget_48)
-        self.widget_57 = QtWidgets.QWidget(self.widget_47)
+        self.joinedGroupChatVerticalLayout.addWidget(self.widget_48)
+        self.widget_57 = QtWidgets.QWidget(self.joinedGroupChatWidget)
         self.widget_57.setStyleSheet("QWidget#widget_57{\n"
 "    max-height:42px;\n"
 "    min-height:42px;\n"
@@ -3182,8 +3330,8 @@ class Ui_MainWindow(object):
         self.label_24.setObjectName("label_24")
         self.horizontalLayout_52.addWidget(self.label_24)
         self.horizontalLayout_52.setStretch(1, 1)
-        self.verticalLayout_68.addWidget(self.widget_57)
-        self.widget_55 = QtWidgets.QWidget(self.widget_47)
+        self.joinedGroupChatVerticalLayout.addWidget(self.widget_57)
+        self.widget_55 = QtWidgets.QWidget(self.joinedGroupChatWidget)
         self.widget_55.setStyleSheet("QWidget#widget_55{\n"
 "    max-height:42px;\n"
 "    min-height:42px;\n"
@@ -3229,21 +3377,21 @@ class Ui_MainWindow(object):
         self.label_9.setObjectName("label_9")
         self.horizontalLayout_50.addWidget(self.label_9)
         self.horizontalLayout_50.setStretch(1, 1)
-        self.verticalLayout_68.addWidget(self.widget_55)
-        self.verticalLayout_67.addWidget(self.widget_47)
-        self.verticalLayout_35.addWidget(self.widget_46, 0, QtCore.Qt.AlignTop)
+        self.joinedGroupChatVerticalLayout.addWidget(self.widget_55)
+        self.verticalLayout_67.addWidget(self.joinedGroupChatWidget)
+        self.groupChatVerticalLayout.addWidget(self.widget_46, 0, QtCore.Qt.AlignTop)
         self.scrollArea_3.setWidget(self.scrollAreaWidgetContents_3)
         self.horizontalLayout_26.addWidget(self.scrollArea_3)
-        self.stackedWidget_2.addWidget(self.page_4)
+        self.stackedWidget_2.addWidget(self.groupChatPage)
         self.verticalLayout_34.addWidget(self.stackedWidget_2)
-        self.stackedWidget.addWidget(self.page_2)
-        self.page_5 = QtWidgets.QWidget()
-        self.page_5.setObjectName("page_5")
-        self.verticalLayout_36 = QtWidgets.QVBoxLayout(self.page_5)
+        self.stackedWidget.addWidget(self.contactsPage)
+        self.spacePage = QtWidgets.QWidget()
+        self.spacePage.setObjectName("spacePage")
+        self.verticalLayout_36 = QtWidgets.QVBoxLayout(self.spacePage)
         self.verticalLayout_36.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_36.setSpacing(0)
         self.verticalLayout_36.setObjectName("verticalLayout_36")
-        self.widget_8 = QtWidgets.QWidget(self.page_5)
+        self.widget_8 = QtWidgets.QWidget(self.spacePage)
         self.widget_8.setStyleSheet("QWidget#widget_8{\n"
 "    max-height:40px;\n"
 "    min-height:40px;\n"
@@ -3307,7 +3455,7 @@ class Ui_MainWindow(object):
         self.pushButton_88.setObjectName("pushButton_88")
         self.horizontalLayout_46.addWidget(self.pushButton_88)
         self.verticalLayout_36.addWidget(self.widget_8)
-        self.scrollArea_4 = QtWidgets.QScrollArea(self.page_5)
+        self.scrollArea_4 = QtWidgets.QScrollArea(self.spacePage)
         self.scrollArea_4.setStyleSheet("QScrollBar::vertical{\n"
 "    width:9px;\n"
 "    border-radius:4px;\n"
@@ -3332,7 +3480,7 @@ class Ui_MainWindow(object):
         self.scrollArea_4.setWidgetResizable(True)
         self.scrollArea_4.setObjectName("scrollArea_4")
         self.scrollAreaWidgetContents_4 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 458, 2024))
+        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 597, 2024))
         self.scrollAreaWidgetContents_4.setObjectName("scrollAreaWidgetContents_4")
         self.verticalLayout_37 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_4)
         self.verticalLayout_37.setContentsMargins(12, 0, 12, 0)
@@ -4480,7 +4628,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_37.addWidget(self.widget_60)
         self.scrollArea_4.setWidget(self.scrollAreaWidgetContents_4)
         self.verticalLayout_36.addWidget(self.scrollArea_4)
-        self.stackedWidget.addWidget(self.page_5)
+        self.stackedWidget.addWidget(self.spacePage)
         self.verticalLayout.addWidget(self.stackedWidget)
         self.widget_2 = QtWidgets.QWidget(self.centralwidget)
         self.widget_2.setStyleSheet("QWidget#widget_2{\n"
@@ -4624,8 +4772,8 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
-        self.stackedWidget_2.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget_2.setCurrentIndex(1)
         self.comboBox.setCurrentIndex(1)
         self.pushButton_22.clicked.connect(MainWindow.close) # type: ignore
         self.pushButton_21.clicked.connect(MainWindow.showMinimized) # type: ignore
@@ -4649,9 +4797,9 @@ class Ui_MainWindow(object):
         self.pushButton_30.setText(_translate("MainWindow", "VIP"))
         self.lineEdit_2.setText(_translate("MainWindow", "编辑个性签名"))
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "搜索"))
-        self.pushButton.setText(_translate("MainWindow", "消息"))
-        self.pushButton_2.setText(_translate("MainWindow", "联系人"))
-        self.pushButton_3.setText(_translate("MainWindow", "空间"))
+        self.messagePushButton.setText(_translate("MainWindow", "消息"))
+        self.contactsPushButton.setText(_translate("MainWindow", "联系人"))
+        self.spacePushButton.setText(_translate("MainWindow", "空间"))
         self.label_34.setText(_translate("MainWindow", "我的Android手机"))
         self.label_35.setText(_translate("MainWindow", "[图片]"))
         self.label_36.setText(_translate("MainWindow", "1:53"))
@@ -4699,17 +4847,19 @@ class Ui_MainWindow(object):
         self.label_18.setText(_translate("MainWindow", "QQ邮箱提醒"))
         self.label_23.setText(_translate("MainWindow", "Microsoft团队:你的一次性代码"))
         self.label_28.setText(_translate("MainWindow", "2022-12-16"))
-        self.pushButton_31.setText(_translate("MainWindow", "好友"))
-        self.pushButton_32.setText(_translate("MainWindow", "群聊"))
+        self.friendsPushButton.setText(_translate("MainWindow", "好友"))
+        self.groupChatPushButton.setText(_translate("MainWindow", "群聊"))
         self.pushButton_33.setText(_translate("MainWindow", "+"))
-        self.pushButton_36.setText(_translate("MainWindow", "新朋友"))
+        self.newFriendsPushButton.setText(_translate("MainWindow", "新朋友"))
         self.label_86.setText(_translate("MainWindow", "暂时没有可能认识的人"))
-        self.pushButton_35.setText(_translate("MainWindow", "我的设备 1/2"))
+        self.myDevicePushButton.setText(_translate("MainWindow", "我的设备"))
+        self.label_151.setText(_translate("MainWindow", "1/2"))
         self.label_77.setText(_translate("MainWindow", "我的Android手机"))
         self.label_78.setText(_translate("MainWindow", "上次登录:2023-5-6 23:22"))
         self.label_80.setText(_translate("MainWindow", "我的iPad"))
         self.label_84.setText(_translate("MainWindow", "上次登录:2022-11-6"))
-        self.pushButton_34.setText(_translate("MainWindow", "家人 3/4"))
+        self.familyPushButton.setText(_translate("MainWindow", "家人"))
+        self.label_154.setText(_translate("MainWindow", "3/4"))
         self.label_82.setText(_translate("MainWindow", "水青日禾"))
         self.label_83.setText(_translate("MainWindow", "万丈の孤独を乗り切ることができ、星の海を隠すことができる"))
         self.label_88.setText(_translate("MainWindow", "(๑•̀ㅂ•́)و✧"))
@@ -4718,7 +4868,8 @@ class Ui_MainWindow(object):
         self.label_92.setText(_translate("MainWindow", "嘴里坚持着逞强，眼里的泪在投降，仍然维护着尊严下的倔强。"))
         self.label_93.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">大姐</span><span style=\" font-size:10pt; color:#868686;\">(云淡风清)</span></p></body></html>"))
         self.label_94.setText(_translate("MainWindow", "[离线请留言]浮生若梦"))
-        self.pushButton_37.setText(_translate("MainWindow", "我的好友 5/8"))
+        self.myFriendPushButton.setText(_translate("MainWindow", "我的好友"))
+        self.label_155.setText(_translate("MainWindow", "5/8"))
         self.label_85.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ff0000;\">七夜的许愿星</span></p></body></html>"))
         self.pushButton_70.setText(_translate("MainWindow", "SVIP"))
         self.label_90.setText(_translate("MainWindow", "勇敢的人会和勇敢的人相遇！"))
@@ -4738,18 +4889,21 @@ class Ui_MainWindow(object):
         self.label_108.setText(_translate("MainWindow", "🤨我不哭，不闹，习惯等你。"))
         self.label_109.setText(_translate("MainWindow", "卢甫伶(🍁恋红尘🍀)"))
         self.label_110.setText(_translate("MainWindow", "[离线请留言]越长大越孤单"))
-        self.pushButton_84.setText(_translate("MainWindow", "我创建的群聊 2/2"))
+        self.createdGroupChatPushButton.setText(_translate("MainWindow", "我创建的群聊"))
+        self.label_153.setText(_translate("MainWindow", "2/2"))
         self.label_111.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt;\">茉莉</span><span style=\" font-size:9pt; color:#828083;\">(1人)</span></p></body></html>"))
         self.label_4.setText(_translate("MainWindow", "3-29"))
         self.label_119.setText(_translate("MainWindow", "家和万事兴"))
         self.label_19.setText(_translate("MainWindow", "1-19"))
-        self.pushButton_73.setText(_translate("MainWindow", "我管理的群聊 1/2"))
+        self.managedGroupChatPushButton.setText(_translate("MainWindow", "我管理的群聊"))
+        self.label_156.setText(_translate("MainWindow", "1/2"))
         self.label_118.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" color:#ff0000;\">PyQtGuiLib</span></p></body></html>"))
         self.label_14.setText(_translate("MainWindow", "303"))
         self.label_43.setText(_translate("MainWindow", "23:18"))
         self.label_102.setText(_translate("MainWindow", "pyqt大家庭"))
         self.label_33.setText(_translate("MainWindow", "5-5"))
-        self.pushButton_71.setText(_translate("MainWindow", "我加入的群聊 3/4"))
+        self.joinedGroupChatPushButton.setText(_translate("MainWindow", "我加入的群聊"))
+        self.label_157.setText(_translate("MainWindow", "3/4"))
         self.label_117.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt; color:#ff0000;\">我的世界</span><span style=\" font-size:9pt; color:#ff0000;\">(1人)</span></p></body></html>"))
         self.label_38.setText(_translate("MainWindow", "20:32"))
         self.label_101.setText(_translate("MainWindow", "🎀💎🥏"))
@@ -4820,4 +4974,4 @@ class Ui_MainWindow(object):
         self.pushButton_10.setToolTip(_translate("MainWindow", "腾讯视频"))
         self.pushButton_11.setToolTip(_translate("MainWindow", "QQ音乐"))
         self.pushButton_12.setToolTip(_translate("MainWindow", "应用管理器"))
-from resource import  resources_rc
+
