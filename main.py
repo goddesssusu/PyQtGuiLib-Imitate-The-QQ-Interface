@@ -1,16 +1,22 @@
 import sys
 from functools import partial
 
-from PyQt5.QtCore import Qt, QObject, QEvent
-from PyQt5.QtGui import QIcon
+from PyQtGuiLib.header import (
+    Qt,
+    QObject,
+    QEvent,
+    QIcon,
+    QMainWindow,
+    QApplication,
+    QPushButton,
+    QWidget
+)
 
 from resource import resources_rc
-from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QWidget
-
 from mainWindow import Ui_MainWindow
+from pyqt_frameless_window import FramelessMainWindow
 
-
-class QQInterface(QMainWindow, Ui_MainWindow):
+class QQInterface(FramelessMainWindow, Ui_MainWindow):
 
     def __init__(self):
         super().__init__()
