@@ -909,7 +909,7 @@ QPushButton:checked{
 }</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="messagePage">
        <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -955,7 +955,7 @@ QPushButton:checked{
              <height>840</height>
             </rect>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_6">
+           <layout class="QVBoxLayout" name="messageVerticalLayout">
             <property name="spacing">
              <number>0</number>
             </property>
@@ -4110,7 +4110,7 @@ QWidget:hover{
                         </property>
                         <property name="icon">
                          <iconset resource="resource/resources.qrc">
-                          <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
+                          <normaloff>:/icon/icon/箭头下.svg</normaloff>:/icon/icon/箭头下.svg</iconset>
                         </property>
                         <property name="checkable">
                          <bool>true</bool>
@@ -6168,7 +6168,7 @@ QWidget:hover{
                         </property>
                         <property name="icon">
                          <iconset resource="resource/resources.qrc">
-                          <normaloff>:/icon/icon/箭头右.svg</normaloff>:/icon/icon/箭头右.svg</iconset>
+                          <normaloff>:/icon/icon/箭头下.svg</normaloff>:/icon/icon/箭头下.svg</iconset>
                         </property>
                         <property name="checkable">
                          <bool>true</bool>
@@ -6739,7 +6739,7 @@ QScrollBar::sub-line:vertical{
              <x>0</x>
              <y>0</y>
              <width>597</width>
-             <height>2024</height>
+             <height>1990</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_37">
@@ -6778,7 +6778,7 @@ QScrollBar::sub-line:vertical{
               <property name="styleSheet">
                <string notr="true"/>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_84">
+              <layout class="QVBoxLayout" name="trendsVerticalLayout">
                <property name="spacing">
                 <number>30</number>
                </property>
