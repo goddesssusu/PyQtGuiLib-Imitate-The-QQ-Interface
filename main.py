@@ -6,15 +6,16 @@ from PyQtGuiLib.header import (
     QObject,
     QEvent,
     QIcon,
-    QMainWindow,
     QApplication,
     QPushButton,
-    QWidget
+    QWidget,
 )
 
 from resource import resources_rc
-from mainWindow import Ui_MainWindow
 from pyqt_frameless_window import FramelessMainWindow
+
+from mainWindow import Ui_MainWindow
+
 
 class QQInterface(FramelessMainWindow, Ui_MainWindow):
 
@@ -70,6 +71,7 @@ class QQInterface(FramelessMainWindow, Ui_MainWindow):
         if a1.type() == QEvent.Type.MouseButtonPress or a1.type(
         ) == QEvent.Type.MouseButtonDblClick and a1.button() == Qt.MouseButton.LeftButton:
             self.__expand(self._treeWidgets[a0][0], self._treeWidgets[a0][1])
+            return True
         return super().eventFilter(a0, a1)
 
     @staticmethod
