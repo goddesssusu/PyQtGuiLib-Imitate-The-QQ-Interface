@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2023/5/11 10:42
+# @Author  : 讨厌自己
+# @Email   : 507194368@qq.com
+# @File    : main.py
+# @Software: PyCharm
 import sys
 from functools import partial
 
@@ -89,3 +95,4 @@ if __name__ == '__main__':
     w = QQInterface()
     w.show()
     sys.exit(app.exec())
+
