@@ -14,7 +14,7 @@ from PyQtGuiLib.header import (
     QIcon,
     QApplication,
     QPushButton,
-    QWidget,
+    QWidget
 )
 
 from resource import resources_rc
@@ -27,8 +27,9 @@ class QQInterface(FramelessMainWindow, Ui_MainWindow):
 
     def __init__(self):
         super().__init__()
-        self.setupUi(self)
+        FramelessMainWindow.mousePressEvent = lambda *args: None
 
+        self.setupUi(self)
         self.messageVerticalLayout.setAlignment(Qt.AlignmentFlag.AlignTop)
         self.friendsVerticalLayout.setAlignment(Qt.AlignmentFlag.AlignTop)
         self.groupChatVerticalLayout.setAlignment(Qt.AlignmentFlag.AlignTop)
@@ -56,9 +57,11 @@ class QQInterface(FramelessMainWindow, Ui_MainWindow):
             self.joinedGroupChatPushButtonWidget: [
                 self.joinedGroupChatPushButton,
                 self.joinedGroupChatWidget]}
+
         for key, value in self._treeWidgets.items():
             key.installEventFilter(self)
-            value[0].mousePressEvent = key.mousePressEvent
+            value[0].setAttribute(
+                Qt.WidgetAttribute.WA_TransparentForMouseEvents, True)
             self.__expand(*value) if value[1] not in (
                 self.myFriendWidget, self.joinedGroupChatWidget) else None
 
@@ -69,6 +72,7 @@ class QQInterface(FramelessMainWindow, Ui_MainWindow):
             self.friendsPushButton: self.friendsPage,
             self.groupChatPushButton: self.groupChatPage
         }
+
         for key, value in btn_to_page.items():
             key.clicked.connect(
                 partial(value.parent().setCurrentWidget, value))
@@ -76,8 +80,9 @@ class QQInterface(FramelessMainWindow, Ui_MainWindow):
     def eventFilter(self, a0: 'QObject', a1: 'QEvent') -> bool:
         if a1.type() == QEvent.Type.MouseButtonPress or a1.type(
         ) == QEvent.Type.MouseButtonDblClick and a1.button() == Qt.MouseButton.LeftButton:
-            self.__expand(self._treeWidgets[a0][0], self._treeWidgets[a0][1])
+            self.__expand(*self._treeWidgets[a0])
             return True
+
         return super().eventFilter(a0, a1)
 
     @staticmethod
@@ -88,6 +93,10 @@ class QQInterface(FramelessMainWindow, Ui_MainWindow):
         else:
             button.setIcon(QIcon(":/icon/icon/箭头右.svg"))
             widget.hide()
+
+    def mouseMoveEvent(self, e):
+        super().mouseMoveEvent(e)
+        self._move()
 
 
 if __name__ == '__main__':

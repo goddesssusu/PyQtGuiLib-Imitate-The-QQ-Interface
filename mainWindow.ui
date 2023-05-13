@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>606</width>
-    <height>713</height>
+    <height>753</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -972,14 +972,20 @@ QPushButton:checked{
              <number>0</number>
             </property>
             <item>
-             <widget class="QWidget" name="widget_16" native="true">
+             <widget class="CPushButton" name="widget_16" native="true">
               <property name="styleSheet">
                <string notr="true">QWidget#widget_16{
 	max-height:60px;
 	min-height:60px;
+	max-width:16777215px;
+	min-width:0px;
+	border-radius:0px
 }
 QWidget#widget_16:hover{
 	background-color: rgb(242, 242, 242);
+}
+QWidget#widget_16:checked{
+	background-color: rgb(235, 235, 235);
 }</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="0,1,0">
@@ -999,7 +1005,10 @@ QWidget#widget_16:hover{
                 <number>10</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButton_42">
+                <widget class="MPushButton" name="pushButton_42">
+                 <property name="mouseTracking">
+                  <bool>true</bool>
+                 </property>
                  <property name="styleSheet">
                   <string notr="true"/>
                  </property>
@@ -1046,6 +1055,9 @@ QWidget#widget_16:hover{
                  </item>
                  <item>
                   <widget class="QLabel" name="label_35">
+                   <property name="mouseTracking">
+                    <bool>false</bool>
+                   </property>
                    <property name="styleSheet">
                     <string notr="true">QLabel{
 	color: rgb(117, 117, 117);
@@ -1108,14 +1120,20 @@ QWidget#widget_16:hover{
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="widget_9" native="true">
+             <widget class="CPushButton" name="widget_9" native="true">
               <property name="styleSheet">
                <string notr="true">QWidget#widget_9{
 	max-height:60px;
 	min-height:60px;
+	max-width:16777215px;
+	min-width:0px;
+	border-radius:0px
 }
 QWidget#widget_9:hover{
 	background-color: rgb(242, 242, 242);
+}
+QWidget#widget_9:checked{
+	background-color: rgb(235, 235, 235);
 }</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="0,1,0">
@@ -1135,7 +1153,10 @@ QWidget#widget_9:hover{
                 <number>10</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButton_43">
+                <widget class="MPushButton" name="pushButton_43">
+                 <property name="mouseTracking">
+                  <bool>true</bool>
+                 </property>
                  <property name="styleSheet">
                   <string notr="true"/>
                  </property>
@@ -1181,7 +1202,10 @@ QWidget#widget_9:hover{
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="label_8">
+                  <widget class="Label" name="label_8">
+                   <property name="mouseTracking">
+                    <bool>false</bool>
+                   </property>
                    <property name="styleSheet">
                     <string notr="true">QLabel{
 	color: rgb(117, 117, 117);
@@ -1241,14 +1265,20 @@ QWidget#widget_9:hover{
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="widget_22" native="true">
+             <widget class="CPushButton" name="widget_22" native="true">
               <property name="styleSheet">
                <string notr="true">QWidget#widget_22{
 	max-height:60px;
 	min-height:60px;
+	max-width:16777215px;
+	min-width:0px;
+	border-radius:0px
 }
 QWidget#widget_22:hover{
 	background-color: rgb(242, 242, 242);
+}
+QWidget#widget_22:checked{
+	background-color: rgb(235, 235, 235);
 }</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_21" stretch="0,1,0">
@@ -1268,7 +1298,7 @@ QWidget#widget_22:hover{
                 <number>10</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButton_44">
+                <widget class="MPushButton" name="pushButton_44">
                  <property name="styleSheet">
                   <string notr="true"/>
                  </property>
@@ -1347,14 +1377,20 @@ QWidget#widget_22:hover{
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="widget_18" native="true">
+             <widget class="CPushButton" name="widget_18" native="true">
               <property name="styleSheet">
                <string notr="true">QWidget#widget_18{
 	max-height:60px;
 	min-height:60px;
+	max-width:16777215px;
+	min-width:0px;
+	border-radius:0px
 }
 QWidget#widget_18:hover{
 	background-color: rgb(242, 242, 242);
+}
+QWidget#widget_18:checked{
+	background-color: rgb(235, 235, 235);
 }</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="0,1,0">
@@ -1374,7 +1410,7 @@ QWidget#widget_18:hover{
                 <number>10</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButton_45">
+                <widget class="MPushButton" name="pushButton_45">
                  <property name="styleSheet">
                   <string notr="true"/>
                  </property>
@@ -1480,14 +1516,20 @@ QWidget#widget_18:hover{
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="widget_19" native="true">
+             <widget class="CPushButton" name="widget_19" native="true">
               <property name="styleSheet">
                <string notr="true">QWidget#widget_19{
 	max-height:60px;
 	min-height:60px;
+	max-width:16777215px;
+	min-width:0px;
+	border-radius:0px
 }
 QWidget#widget_19:hover{
 	background-color: rgb(242, 242, 242);
+}
+QWidget#widget_19:checked{
+	background-color: rgb(235, 235, 235);
 }</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="0,1,0">
@@ -1507,7 +1549,7 @@ QWidget#widget_19:hover{
                 <number>10</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButton_46">
+                <widget class="MPushButton" name="pushButton_46">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -1616,14 +1658,20 @@ QWidget#widget_19:hover{
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="widget_14" native="true">
+             <widget class="CPushButton" name="widget_14" native="true">
               <property name="styleSheet">
                <string notr="true">QWidget#widget_14{
 	max-height:60px;
 	min-height:60px;
+	max-width:16777215px;
+	min-width:0px;
+	border-radius:0px
 }
 QWidget#widget_14:hover{
 	background-color: rgb(242, 242, 242);
+}
+QWidget#widget_14:checked{
+	background-color: rgb(235, 235, 235);
 }</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="0,1,0">
@@ -1643,7 +1691,7 @@ QWidget#widget_14:hover{
                 <number>10</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButton_47">
+                <widget class="MPushButton" name="pushButton_47">
                  <property name="styleSheet">
                   <string notr="true"/>
                  </property>
@@ -1722,14 +1770,20 @@ QWidget#widget_14:hover{
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="widget_21" native="true">
+             <widget class="CPushButton" name="widget_21" native="true">
               <property name="styleSheet">
                <string notr="true">QWidget#widget_21{
 	max-height:60px;
 	min-height:60px;
+	max-width:16777215px;
+	min-width:0px;
+	border-radius:0px
 }
 QWidget#widget_21:hover{
 	background-color: rgb(242, 242, 242);
+}
+QWidget#widget_21:checked{
+	background-color: rgb(235, 235, 235);
 }</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_20" stretch="0,1,0">
@@ -1749,7 +1803,7 @@ QWidget#widget_21:hover{
                 <number>10</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButton_48">
+                <widget class="MPushButton" name="pushButton_48">
                  <property name="styleSheet">
                   <string notr="true"/>
                  </property>
@@ -1858,14 +1912,20 @@ QWidget#widget_21:hover{
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="widget_17" native="true">
+             <widget class="CPushButton" name="widget_17" native="true">
               <property name="styleSheet">
                <string notr="true">QWidget#widget_17{
 	max-height:60px;
 	min-height:60px;
+	max-width:16777215px;
+	min-width:0px;
+	border-radius:0px
 }
 QWidget#widget_17:hover{
 	background-color: rgb(242, 242, 242);
+}
+QWidget#widget_17:checked{
+	background-color: rgb(235, 235, 235);
 }</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="0,1,0">
@@ -1885,7 +1945,7 @@ QWidget#widget_17:hover{
                 <number>10</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButton_49">
+                <widget class="MPushButton" name="pushButton_49">
                  <property name="styleSheet">
                   <string notr="true"/>
                  </property>
@@ -1991,14 +2051,20 @@ QWidget#widget_17:hover{
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="widget_12" native="true">
+             <widget class="CPushButton" name="widget_12" native="true">
               <property name="styleSheet">
                <string notr="true">QWidget#widget_12{
 	max-height:60px;
 	min-height:60px;
+	max-width:16777215px;
+	min-width:0px;
+	border-radius:0px
 }
 QWidget#widget_12:hover{
 	background-color: rgb(242, 242, 242);
+}
+QWidget#widget_12:checked{
+	background-color: rgb(235, 235, 235);
 }</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="0,1,0">
@@ -2018,7 +2084,7 @@ QWidget#widget_12:hover{
                 <number>10</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButton_50">
+                <widget class="MPushButton" name="pushButton_50">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -2100,14 +2166,20 @@ QWidget#widget_12:hover{
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="widget_13" native="true">
+             <widget class="CPushButton" name="widget_13" native="true">
               <property name="styleSheet">
                <string notr="true">QWidget#widget_13{
 	max-height:60px;
 	min-height:60px;
+	max-width:16777215px;
+	min-width:0px;
+	border-radius:0px
 }
 QWidget#widget_13:hover{
 	background-color: rgb(242, 242, 242);
+}
+QWidget#widget_13:checked{
+	background-color: rgb(235, 235, 235);
 }</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="0,1,0">
@@ -2127,7 +2199,7 @@ QWidget#widget_13:hover{
                 <number>10</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButton_51">
+                <widget class="MPushButton" name="pushButton_51">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -2209,14 +2281,20 @@ QWidget#widget_13:hover{
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="widget_11" native="true">
+             <widget class="CPushButton" name="widget_11" native="true">
               <property name="styleSheet">
                <string notr="true">QWidget#widget_11{
 	max-height:60px;
 	min-height:60px;
+	max-width:16777215px;
+	min-width:0px;
+	border-radius:0px
 }
 QWidget#widget_11:hover{
 	background-color: rgb(242, 242, 242);
+}
+QWidget#widget_11:checked{
+	background-color: rgb(235, 235, 235);
 }</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="0,1,0">
@@ -2236,7 +2314,7 @@ QWidget#widget_11:hover{
                 <number>10</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButton_52">
+                <widget class="MPushButton" name="pushButton_52">
                  <property name="styleSheet">
                   <string notr="true"/>
                  </property>
@@ -2315,14 +2393,20 @@ QWidget#widget_11:hover{
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="widget_10" native="true">
+             <widget class="CPushButton" name="widget_10" native="true">
               <property name="styleSheet">
                <string notr="true">QWidget#widget_10{
 	max-height:60px;
 	min-height:60px;
+	max-width:16777215px;
+	min-width:0px;
+	border-radius:0px
 }
 QWidget#widget_10:hover{
 	background-color: rgb(242, 242, 242);
+}
+QWidget#widget_10:checked{
+	background-color: rgb(235, 235, 235);
 }</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="0,1,0">
@@ -2342,7 +2426,7 @@ QWidget#widget_10:hover{
                 <number>10</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButton_53">
+                <widget class="MPushButton" name="pushButton_53">
                  <property name="styleSheet">
                   <string notr="true"/>
                  </property>
@@ -2421,14 +2505,20 @@ QWidget#widget_10:hover{
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="widget_20" native="true">
+             <widget class="CPushButton" name="widget_20" native="true">
               <property name="styleSheet">
                <string notr="true">QWidget#widget_20{
 	max-height:60px;
 	min-height:60px;
+	max-width:16777215px;
+	min-width:0px;
+	border-radius:0px
 }
 QWidget#widget_20:hover{
 	background-color: rgb(242, 242, 242);
+}
+QWidget#widget_20:checked{
+	background-color: rgb(235, 235, 235);
 }</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_19" stretch="0,1,0">
@@ -2448,7 +2538,7 @@ QWidget#widget_20:hover{
                 <number>10</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButton_54">
+                <widget class="MPushButton" name="pushButton_54">
                  <property name="enabled">
                   <bool>false</bool>
                  </property>
@@ -2530,14 +2620,20 @@ QWidget#widget_20:hover{
              </widget>
             </item>
             <item>
-             <widget class="QWidget" name="widget_15" native="true">
+             <widget class="CPushButton" name="widget_15" native="true">
               <property name="styleSheet">
                <string notr="true">QWidget#widget_15{
 	max-height:60px;
 	min-height:60px;
+	max-width:16777215px;
+	min-width:0px;
+	border-radius:0px
 }
 QWidget#widget_15:hover{
 	background-color: rgb(242, 242, 242);
+}
+QWidget#widget_15:checked{
+	background-color: rgb(235, 235, 235);
 }</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="0,1,0">
@@ -2557,7 +2653,7 @@ QWidget#widget_15:hover{
                 <number>10</number>
                </property>
                <item>
-                <widget class="QPushButton" name="pushButton_55">
+                <widget class="MPushButton" name="pushButton_55">
                  <property name="styleSheet">
                   <string notr="true"/>
                  </property>
@@ -2855,7 +2951,7 @@ QPushButton:hover{
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>599</width>
+                 <width>536</width>
                  <height>1052</height>
                 </rect>
                </property>
@@ -3577,7 +3673,7 @@ QWidget#widget_31:hover{
                          <item>
                           <layout class="QVBoxLayout" name="verticalLayout_47">
                            <item>
-                            <widget class="QPushButton" name="pushButton_38">
+                            <widget class="PushButton" name="pushButton_38">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -3711,7 +3807,7 @@ QWidget#widget_35:hover{
                          <item>
                           <layout class="QVBoxLayout" name="verticalLayout_52">
                            <item>
-                            <widget class="QPushButton" name="pushButton_40">
+                            <widget class="PushButton" name="pushButton_40">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -3848,7 +3944,7 @@ QWidget#widget_36:hover{
                          <item>
                           <layout class="QVBoxLayout" name="verticalLayout_54">
                            <item>
-                            <widget class="QPushButton" name="pushButton_41">
+                            <widget class="PushButton" name="pushButton_41">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -3988,7 +4084,7 @@ QWidget#widget_37:hover{
                          <item>
                           <layout class="QVBoxLayout" name="verticalLayout_56">
                            <item>
-                            <widget class="QPushButton" name="pushButton_62">
+                            <widget class="PushButton" name="pushButton_62">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -4298,7 +4394,7 @@ QPushButton:hover{
                          <item>
                           <layout class="QVBoxLayout" name="verticalLayout_60">
                            <item>
-                            <widget class="QPushButton" name="pushButton_39">
+                            <widget class="PushButton" name="pushButton_39">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -4486,7 +4582,7 @@ QPushButton:hover{
                          <item>
                           <layout class="QVBoxLayout" name="verticalLayout_70">
                            <item>
-                            <widget class="QPushButton" name="pushButton_76">
+                            <widget class="PushButton" name="pushButton_76">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -4674,7 +4770,7 @@ QPushButton:hover{
                          <item>
                           <layout class="QVBoxLayout" name="verticalLayout_72">
                            <item>
-                            <widget class="QPushButton" name="pushButton_79">
+                            <widget class="PushButton" name="pushButton_79">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -4808,7 +4904,7 @@ QWidget#widget_39:hover{
                          <item>
                           <layout class="QVBoxLayout" name="verticalLayout_62">
                            <item>
-                            <widget class="QPushButton" name="pushButton_65">
+                            <widget class="PushButton" name="pushButton_65">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -4945,7 +5041,7 @@ QWidget#widget_40:hover{
                          <item>
                           <layout class="QVBoxLayout" name="verticalLayout_64">
                            <item>
-                            <widget class="QPushButton" name="pushButton_67">
+                            <widget class="PushButton" name="pushButton_67">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -5085,7 +5181,7 @@ QWidget#widget_41:hover{
                          <item>
                           <layout class="QVBoxLayout" name="verticalLayout_66">
                            <item>
-                            <widget class="QPushButton" name="pushButton_69">
+                            <widget class="PushButton" name="pushButton_69">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -5225,7 +5321,7 @@ QWidget#widget_44:hover{
                          <item>
                           <layout class="QVBoxLayout" name="verticalLayout_74">
                            <item>
-                            <widget class="QPushButton" name="pushButton_81">
+                            <widget class="PushButton" name="pushButton_81">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -5365,7 +5461,7 @@ QWidget#widget_45:hover{
                          <item>
                           <layout class="QVBoxLayout" name="verticalLayout_76">
                            <item>
-                            <widget class="QPushButton" name="pushButton_83">
+                            <widget class="PushButton" name="pushButton_83">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -5445,8 +5541,8 @@ QPushButton:hover{
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>606</width>
-                 <height>447</height>
+                 <width>191</width>
+                 <height>438</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="groupChatVerticalLayout">
@@ -6738,8 +6834,8 @@ QScrollBar::sub-line:vertical{
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>597</width>
-             <height>1990</height>
+             <width>458</width>
+             <height>2024</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_37">
@@ -9401,6 +9497,29 @@ QPushButton:hover{
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PushButton</class>
+   <extends>QPushButton</extends>
+   <header>pushButton</header>
+  </customwidget>
+  <customwidget>
+   <class>CPushButton</class>
+   <extends>QWidget</extends>
+   <header>pushButton</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MPushButton</class>
+   <extends>QPushButton</extends>
+   <header>pushButton</header>
+  </customwidget>
+  <customwidget>
+   <class>Label</class>
+   <extends>QLabel</extends>
+   <header>pushButton</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="resource/resources.qrc"/>
  </resources>
