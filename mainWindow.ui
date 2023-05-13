@@ -2951,7 +2951,7 @@ QPushButton:hover{
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>536</width>
+                 <width>599</width>
                  <height>1052</height>
                 </rect>
                </property>
@@ -5541,8 +5541,8 @@ QPushButton:hover{
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>191</width>
-                 <height>438</height>
+                 <width>606</width>
+                 <height>487</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="groupChatVerticalLayout">
@@ -6726,14 +6726,15 @@ QComboBox::drop-down{
 	margin-right:5px;
 	image: url(:/icon/icon/三角箭头下.svg);
 }
-QListView{
+QAbstractItemView{
 	background-color: rgb(255, 255, 255);
 	border:1px solid rgb(185, 185, 185);
 }
-QListView::item{
-	height:32px;
+QAbstractItemView::item{
+	min-height:32px;
+	max-height:32px;
 }
-QListView::item:hover{
+QAbstractItemView::item:hover{
 	background-color: rgb(243, 243, 243);
 	color: rgb(51, 51, 51);
 }
@@ -6834,7 +6835,7 @@ QScrollBar::sub-line:vertical{
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>458</width>
+             <width>597</width>
              <height>2024</height>
             </rect>
            </property>

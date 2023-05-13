@@ -1588,7 +1588,7 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 536, 1052))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 599, 1052))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.friendsVerticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)
         self.friendsVerticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -2910,7 +2910,7 @@ class Ui_MainWindow(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollArea_3.setObjectName("scrollArea_3")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 191, 438))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 606, 487))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.groupChatVerticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.groupChatVerticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -3507,14 +3507,15 @@ class Ui_MainWindow(object):
 "    margin-right:5px;\n"
 "    image: url(:/icon/icon/三角箭头下.svg);\n"
 "}\n"
-"QListView{\n"
+"QAbstractItemView{\n"
 "    background-color: rgb(255, 255, 255);\n"
 "    border:1px solid rgb(185, 185, 185);\n"
 "}\n"
-"QListView::item{\n"
-"    height:32px;\n"
+"QAbstractItemView::item{\n"
+"    min-height:32px;\n"
+"    max-height:32px;\n"
 "}\n"
-"QListView::item:hover{\n"
+"QAbstractItemView::item:hover{\n"
 "    background-color: rgb(243, 243, 243);\n"
 "    color: rgb(51, 51, 51);\n"
 "}\n"
@@ -3570,7 +3571,7 @@ class Ui_MainWindow(object):
         self.scrollArea_4.setWidgetResizable(True)
         self.scrollArea_4.setObjectName("scrollArea_4")
         self.scrollAreaWidgetContents_4 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 458, 2024))
+        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 597, 2024))
         self.scrollAreaWidgetContents_4.setObjectName("scrollAreaWidgetContents_4")
         self.verticalLayout_37 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_4)
         self.verticalLayout_37.setContentsMargins(12, 0, 12, 0)

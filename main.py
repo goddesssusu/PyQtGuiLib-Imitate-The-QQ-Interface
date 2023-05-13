@@ -14,7 +14,8 @@ from PyQtGuiLib.header import (
     QIcon,
     QApplication,
     QPushButton,
-    QWidget
+    QWidget,
+    QStyledItemDelegate
 )
 
 from resource import resources_rc
@@ -34,6 +35,8 @@ class QQInterface(FramelessMainWindow, Ui_MainWindow):
         self.friendsVerticalLayout.setAlignment(Qt.AlignmentFlag.AlignTop)
         self.groupChatVerticalLayout.setAlignment(Qt.AlignmentFlag.AlignTop)
         self.trendsVerticalLayout.setAlignment(Qt.AlignmentFlag.AlignTop)
+
+        self.comboBox.setItemDelegate(QStyledItemDelegate())
 
         self._treeWidgets = {
             self.newFriendsPushButtonWidget: [
@@ -104,4 +107,3 @@ if __name__ == '__main__':
     w = QQInterface()
     w.show()
     sys.exit(app.exec())
-
