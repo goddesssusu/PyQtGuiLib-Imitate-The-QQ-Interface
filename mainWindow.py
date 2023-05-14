@@ -350,23 +350,21 @@ class Ui_MainWindow(object):
 "}")
         self.label_3.setObjectName("label_3")
         self.horizontalLayout_6.addWidget(self.label_3)
-        self.pushButton_29 = QtWidgets.QPushButton(self.widget_7)
+        self.pushButton_29 = StrokeFontButton(self.widget_7)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.pushButton_29.sizePolicy().hasHeightForWidth())
         self.pushButton_29.setSizePolicy(sizePolicy)
         self.pushButton_29.setStyleSheet("QPushButton{\n"
-"    font: 10px \"Impact\";\n"
-"    border:1px solid transparent;\n"
-"    border-radius:2px;\n"
-"    max-width:20px;\n"
-"    max-height:14px;\n"
-"    color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.4, fx:0.5, fy:0.5, stop:0 rgba(235, 240, 49, 255), stop:1 rgba(184, 96, 48, 255));\n"
+"    font: 9px \"Impact\";\n"
+"    max-width:23px;\n"
+"    max-height:13px;\n"
+"    min-width:23px;\n"
+"    min-height:13px;\n"
+"    /*color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.4, fx:0.5, fy:0.5, stop:0 rgba(235, 240, 49, 255), stop:1 rgba(184, 96, 48, 255));*/\n"
 "    background-color:transparent;\n"
-"}\n"
-"QPushButton:hover{\n"
-"    background-color: rgba(255, 255, 255, 60);\n"
+"    color: rgb(255, 255, 255);\n"
 "}")
         self.pushButton_29.setObjectName("pushButton_29")
         self.horizontalLayout_6.addWidget(self.pushButton_29)
@@ -671,7 +669,7 @@ class Ui_MainWindow(object):
         self.label_7.setObjectName("label_7")
         self.verticalLayout_5.addWidget(self.label_7)
         self.label_8 = Label(self.widget_9)
-        self.label_8.setMouseTracking(False)
+        self.label_8.setMouseTracking(True)
         self.label_8.setStyleSheet("QLabel{\n"
 "    color: rgb(117, 117, 117);\n"
 "}")
@@ -2910,7 +2908,7 @@ class Ui_MainWindow(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollArea_3.setObjectName("scrollArea_3")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 606, 487))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 191, 438))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.groupChatVerticalLayout = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.groupChatVerticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -3571,7 +3569,7 @@ class Ui_MainWindow(object):
         self.scrollArea_4.setWidgetResizable(True)
         self.scrollArea_4.setObjectName("scrollArea_4")
         self.scrollAreaWidgetContents_4 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 597, 2024))
+        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 458, 2024))
         self.scrollAreaWidgetContents_4.setObjectName("scrollAreaWidgetContents_4")
         self.verticalLayout_37 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_4)
         self.verticalLayout_37.setContentsMargins(12, 0, 12, 0)
@@ -4884,7 +4882,7 @@ class Ui_MainWindow(object):
         self.pushButton_21.setToolTip(_translate("MainWindow", "最小化"))
         self.pushButton_22.setToolTip(_translate("MainWindow", "关闭"))
         self.label_3.setText(_translate("MainWindow", "PyQtGuiLib"))
-        self.pushButton_29.setText(_translate("MainWindow", "LV 19"))
+        self.pushButton_29.setText(_translate("MainWindow", "L V 1 9"))
         self.pushButton_30.setText(_translate("MainWindow", "VIP"))
         self.lineEdit_2.setText(_translate("MainWindow", "编辑个性签名"))
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "搜索"))
@@ -5065,5 +5063,4 @@ class Ui_MainWindow(object):
         self.pushButton_10.setToolTip(_translate("MainWindow", "腾讯视频"))
         self.pushButton_11.setToolTip(_translate("MainWindow", "QQ音乐"))
         self.pushButton_12.setToolTip(_translate("MainWindow", "应用管理器"))
-from pushButton import CPushButton, Label, MPushButton, PushButton
-
+from pushButton import CPushButton, Label, MPushButton, PushButton, StrokeFontButton

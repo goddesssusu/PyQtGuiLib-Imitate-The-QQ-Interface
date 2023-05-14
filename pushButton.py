@@ -4,7 +4,21 @@
 # @Email   : 507194368@qq.com
 # @File    : pushButton.py
 # @Software: PyCharm
-from PyQtGuiLib.header import QPushButton, QObject, QEvent, Qt, QLabel
+from PyQtGuiLib.header import (
+    QPushButton,
+    QObject,
+    QEvent,
+    Qt,
+    QLabel,
+    QPainter,
+    QFontMetrics,
+    QPainterPath,
+    QColor,
+    QPen,
+    QBrush,
+    QPaintEvent,
+    QEnterEvent
+)
 
 
 class PushButton(QPushButton):
@@ -45,3 +59,43 @@ class Label(QLabel):
         super().__init__(*args, **kwargs)
         self.setAttribute(
             Qt.WidgetAttribute.WA_TransparentForMouseEvents, True)
+
+
+class StrokeFontButton(QPushButton):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.hovered = False
+
+    def enterEvent(self, event: QEnterEvent) -> None:
+        self.hovered = True
+        self.update()
+
+    def leaveEvent(self, event: QEvent) -> None:
+        self.hovered = False
+        self.update()
+
+    def paintEvent(self, event: QPaintEvent):
+        painter = QPainter(self)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+        painter.setFont(self.font())
+
+        pen = QPen(Qt.GlobalColor.red)
+        pen.setStyle(Qt.PenStyle.SolidLine)
+        pen.setWidth(1)
+
+        metrics = QFontMetrics(self.font())
+        w = metrics.width(self.text(), Qt.TextFlag.TextSingleLine)
+        h = metrics.height()
+        x = (self.width() - w) / 2
+        y = (self.height() - h) / 2 + h - 3
+
+        path = QPainterPath()
+        path.addText(x, y, self.font(), self.text())
+        painter.strokePath(path, pen)
+        painter.fillPath(path, QBrush(Qt.GlobalColor.yellow))
+
+        if self.hovered:
+            painter.setBrush(QColor(255, 255, 255, 50))
+            painter.setPen(Qt.PenStyle.NoPen)
+            painter.drawRoundedRect(self.rect(), 2, 2)

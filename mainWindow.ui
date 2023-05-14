@@ -608,7 +608,7 @@ QPushButton:hover{
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButton_29">
+                <widget class="StrokeFontButton" name="pushButton_29">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                    <horstretch>0</horstretch>
@@ -617,20 +617,18 @@ QPushButton:hover{
                  </property>
                  <property name="styleSheet">
                   <string notr="true">QPushButton{
-	font: 10px &quot;Impact&quot;;
-	border:1px solid transparent;
-	border-radius:2px;
-	max-width:20px;
-	max-height:14px;
-	color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.4, fx:0.5, fy:0.5, stop:0 rgba(235, 240, 49, 255), stop:1 rgba(184, 96, 48, 255));
+	font: 9px &quot;Impact&quot;;
+	max-width:23px;
+	max-height:13px;
+	min-width:23px;
+	min-height:13px;
+	/*color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.4, fx:0.5, fy:0.5, stop:0 rgba(235, 240, 49, 255), stop:1 rgba(184, 96, 48, 255));*/
 	background-color:transparent;
-}
-QPushButton:hover{
-	background-color: rgba(255, 255, 255, 60);
+	color: rgb(255, 255, 255);
 }</string>
                  </property>
                  <property name="text">
-                  <string>LV 19</string>
+                  <string>L V 1 9</string>
                  </property>
                 </widget>
                </item>
@@ -1204,7 +1202,7 @@ QWidget#widget_9:checked{
                  <item>
                   <widget class="Label" name="label_8">
                    <property name="mouseTracking">
-                    <bool>false</bool>
+                    <bool>true</bool>
                    </property>
                    <property name="styleSheet">
                     <string notr="true">QLabel{
@@ -5541,8 +5539,8 @@ QPushButton:hover{
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>606</width>
-                 <height>487</height>
+                 <width>191</width>
+                 <height>438</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="groupChatVerticalLayout">
@@ -6835,7 +6833,7 @@ QScrollBar::sub-line:vertical{
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>597</width>
+             <width>458</width>
              <height>2024</height>
             </rect>
            </property>
@@ -9518,6 +9516,11 @@ QPushButton:hover{
   <customwidget>
    <class>Label</class>
    <extends>QLabel</extends>
+   <header>pushButton</header>
+  </customwidget>
+  <customwidget>
+   <class>StrokeFontButton</class>
+   <extends>QPushButton</extends>
    <header>pushButton</header>
   </customwidget>
  </customwidgets>
