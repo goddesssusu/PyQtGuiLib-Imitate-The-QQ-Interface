@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2023/5/14 3:45
+# @Time    : 2023/5/14 13:45
 # @Author  : 讨厌自己
 # @Email   : 507194368@qq.com
 # @File    : pushButton.py
@@ -65,14 +65,14 @@ class StrokeFontButton(QPushButton):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.hovered = False
+        self._hovered = False
 
     def enterEvent(self, event: QEnterEvent) -> None:
-        self.hovered = True
+        self._hovered = True
         self.update()
 
     def leaveEvent(self, event: QEvent) -> None:
-        self.hovered = False
+        self._hovered = False
         self.update()
 
     def paintEvent(self, event: QPaintEvent):
@@ -95,7 +95,7 @@ class StrokeFontButton(QPushButton):
         painter.strokePath(path, pen)
         painter.fillPath(path, QBrush(Qt.GlobalColor.yellow))
 
-        if self.hovered:
+        if self._hovered:
             painter.setBrush(QColor(255, 255, 255, 50))
             painter.setPen(Qt.PenStyle.NoPen)
             painter.drawRoundedRect(self.rect(), 2, 2)
