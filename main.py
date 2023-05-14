@@ -15,7 +15,8 @@ from PyQtGuiLib.header import (
     QApplication,
     QPushButton,
     QWidget,
-    QStyledItemDelegate
+    QStyledItemDelegate,
+    PYQT_VERSIONS
 )
 
 from resource import resources_rc
@@ -106,4 +107,8 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     w = QQInterface()
     w.show()
-    sys.exit(app.exec())
+
+    if PYQT_VERSIONS in ["PyQt6", "PySide6"]:
+        sys.exit(app.exec())
+    else:
+        sys.exit(app.exec_())
