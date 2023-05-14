@@ -5064,3 +5064,4 @@ class Ui_MainWindow(object):
         self.pushButton_11.setToolTip(_translate("MainWindow", "QQ音乐"))
         self.pushButton_12.setToolTip(_translate("MainWindow", "应用管理器"))
 from pushButton import CPushButton, Label, MPushButton, PushButton, StrokeFontButton
+
